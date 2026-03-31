@@ -40,3 +40,9 @@ Explains cause and fixes
 
 ### Run
 uvicorn main:app --reload
+
+## Day 5 – Context Awareness
+
+- Added context logs support
+- Improved root cause accuracy
+- Multi-log reasoning capability

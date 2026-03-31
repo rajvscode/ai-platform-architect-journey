@@ -10,11 +10,16 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 class LogRequest(BaseModel):
     log: str
+    context: list[str] = []
 
 
-def analyze_log(log_text):
+def analyze_log(log_text, context_logs):
+    context_text = "\n".join(context_logs)
+
     prompt = f"""
 You are a senior backend engineer expert in Kafka, distributed systems, and payments.
+
+Analyze the issue considering system context.
 
 Return STRICTLY valid JSON:
 
@@ -24,7 +29,10 @@ Return STRICTLY valid JSON:
   "solutions": ["solution1", "solution2"]
 }}
 
-Log:
+Context Logs:
+{context_text}
+
+Current Log:
 {log_text}
 """
 
@@ -43,4 +51,4 @@ Log:
 
 @app.post("/analyze-log")
 def analyze(request: LogRequest):
-    return analyze_log(request.log)
+    return analyze_log(request.log, request.context)
