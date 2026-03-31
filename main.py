@@ -16,10 +16,16 @@ class LogRequest(BaseModel):
 
 
 def analyze_log(log_text, context_logs):
-    retrieved_docs = search_similar(log_text)
+    retrieved_docs = search_similar(log_text, threshold=0.8)
+
+    if not retrieved_docs:
+        retrieved_docs = ["No relevant past logs found"]
+
+    print("Retrieved Docs:", retrieved_docs)
 
     context_text = "\n".join(context_logs)
     memory_text = "\n".join(retrieved_docs)
+
 
     prompt = f"""
 You are a senior backend engineer expert in Kafka, distributed systems, and payments.
@@ -34,7 +40,7 @@ Return STRICTLY valid JSON:
   "solutions": ["solution1", "solution2"]
 }}
 
-Knowledge Base:
+Knowledge Base (only relevant past issues):
 {memory_text}
 
 Context Logs:

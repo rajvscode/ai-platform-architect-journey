@@ -37,11 +37,19 @@ def build_index(docs):
     return index, docs
 
 
-def search_similar(query):
+def search_similar(query, threshold=0.5, k=5):
     docs = load_documents()
     index, docs = build_index(docs)
 
     query_vector = np.array([get_embedding(query)]).astype("float32")
-    distances, indices = index.search(query_vector, k=2)
+    distances, indices = index.search(query_vector, k=k)
 
-    return [docs[i] for i in indices[0]]
+    results = []
+
+    for dist, idx in zip(distances[0], indices[0]):
+        similarity = 1 - dist  # convert distance → similarity
+
+        if similarity >= threshold:
+            results.append(docs[idx])
+
+    return results
