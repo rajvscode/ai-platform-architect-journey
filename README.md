@@ -64,3 +64,15 @@ uvicorn main:app --reload
 - Added similarity threshold filtering
 - Improved relevance of retrieved logs
 - Reduced noise in AI responses
+
+## Day 9 – Observability
+
+- Added logging system
+- Tracked requests and responses
+- Measured execution time
+
+## Day 10 – Caching
+
+- Added cache layer
+- Reduced repeated API calls
+- Improved response time

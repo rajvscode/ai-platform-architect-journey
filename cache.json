@@ -1,0 +1,14 @@
+{
+  "Database connection pool exhausted": {
+    "issue": "Database connection pool exhausted",
+    "root_causes": [
+      "Too many concurrent database requests",
+      "Insufficient database connection pool size"
+    ],
+    "solutions": [
+      "Increase the size of the database connection pool",
+      "Optimize database queries to reduce the number of concurrent requests",
+      "Implement connection pooling best practices"
+    ]
+  }
+}

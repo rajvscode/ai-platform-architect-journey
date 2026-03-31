@@ -4,6 +4,7 @@ from openai import OpenAI
 from rag import search_similar
 from rag import search_similar, save_document
 from logger import logger
+from cache import get_from_cache, save_to_cache
 import time
 import os
 import json
@@ -71,8 +72,17 @@ def analyze(request: LogRequest):
 
     logger.info(f"Incoming request: {request.log}")
 
+    # 🔥 Step 1: Check cache
+    cached = get_from_cache(request.log)
+    if cached:
+        logger.info("Cache hit")
+        return cached
+
     try:
         result = analyze_log(request.log, request.context)
+
+        # 🔥 Step 2: Save to cache
+        save_to_cache(request.log, result)
 
         duration = time.time() - start_time
 

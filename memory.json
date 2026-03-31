@@ -9,5 +9,6 @@
   "Redis cache miss spike",
   "Paypal Stock Price down reason",
   "payment timeout",
+  "Database connection pool exhausted",
   "Database connection pool exhausted"
 ]
