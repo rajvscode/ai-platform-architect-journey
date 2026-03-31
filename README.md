@@ -52,3 +52,9 @@ uvicorn main:app --reload
 - Implemented vector search using FAISS
 - Stored known issues as embeddings
 - Retrieved similar logs for better analysis
+
+## Day 7 – Persistent Memory
+
+- Stored logs dynamically in memory.json
+- Enabled learning from past logs
+- Built dynamic retrieval system

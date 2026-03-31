@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from openai import OpenAI
 from rag import search_similar
+from rag import search_similar, save_document
 import os
 import json
 
@@ -58,4 +59,9 @@ Current Log:
 
 @app.post("/analyze-log")
 def analyze(request: LogRequest):
-    return analyze_log(request.log, request.context)
+    result = analyze_log(request.log, request.context)
+
+    # Save new log into memory
+    save_document(request.log)
+
+    return result

@@ -1,0 +1,7 @@
+[
+  "Kafka timeout due to broker overload",
+  "Database connection pool exhausted due to high concurrency",
+  "NullPointerException due to uninitialized object",
+  "Kafka timeout in payment service",
+  "Kafka timeout issue observed again"
+]
