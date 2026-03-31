@@ -5,5 +5,9 @@
   "Kafka timeout in payment service",
   "Kafka timeout issue observed again",
   "Kafka timeout",
-  "Redis cache miss spike"
+  "Redis cache miss spike",
+  "Redis cache miss spike",
+  "Paypal Stock Price down reason",
+  "payment timeout",
+  "Database connection pool exhausted"
 ]

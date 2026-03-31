@@ -3,6 +3,8 @@ from pydantic import BaseModel
 from openai import OpenAI
 from rag import search_similar
 from rag import search_similar, save_document
+from logger import logger
+import time
 import os
 import json
 
@@ -65,9 +67,22 @@ Current Log:
 
 @app.post("/analyze-log")
 def analyze(request: LogRequest):
-    result = analyze_log(request.log, request.context)
+    start_time = time.time()
 
-    # Save new log into memory
-    save_document(request.log)
+    logger.info(f"Incoming request: {request.log}")
 
-    return result
+    try:
+        result = analyze_log(request.log, request.context)
+
+        duration = time.time() - start_time
+
+        logger.info(f"Response: {result}")
+        logger.info(f"Execution time: {duration:.2f}s")
+
+        save_document(request.log)
+
+        return result
+
+    except Exception as e:
+        logger.error(f"Error: {str(e)}")
+        return {"error": "Internal server error"}

@@ -58,3 +58,9 @@ uvicorn main:app --reload
 - Stored logs dynamically in memory.json
 - Enabled learning from past logs
 - Built dynamic retrieval system
+
+## Day 8 – Smart Retrieval
+
+- Added similarity threshold filtering
+- Improved relevance of retrieved logs
+- Reduced noise in AI responses
