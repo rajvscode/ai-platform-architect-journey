@@ -30,3 +30,13 @@ Explains cause and fixes
 - Converted AI response to JSON
 - Enabled machine-readable output
 - Added error handling for invalid responses
+
+## Day 4 – AI Microservice
+
+- Built REST API using FastAPI
+- Endpoint: POST /analyze-log
+- Input: log
+- Output: structured JSON analysis
+
+### Run
+uvicorn main:app --reload
