@@ -46,3 +46,9 @@ uvicorn main:app --reload
 - Added context logs support
 - Improved root cause accuracy
 - Multi-log reasoning capability
+
+## Day 6 – RAG (Memory System)
+
+- Implemented vector search using FAISS
+- Stored known issues as embeddings
+- Retrieved similar logs for better analysis

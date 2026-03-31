@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
 from openai import OpenAI
+from rag import search_similar
 import os
 import json
 
@@ -14,12 +15,15 @@ class LogRequest(BaseModel):
 
 
 def analyze_log(log_text, context_logs):
+    retrieved_docs = search_similar(log_text)
+
     context_text = "\n".join(context_logs)
+    memory_text = "\n".join(retrieved_docs)
 
     prompt = f"""
 You are a senior backend engineer expert in Kafka, distributed systems, and payments.
 
-Analyze the issue considering system context.
+Use both system context and retrieved knowledge.
 
 Return STRICTLY valid JSON:
 
@@ -28,6 +32,9 @@ Return STRICTLY valid JSON:
   "root_causes": ["cause1", "cause2"],
   "solutions": ["solution1", "solution2"]
 }}
+
+Knowledge Base:
+{memory_text}
 
 Context Logs:
 {context_text}
