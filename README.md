@@ -76,3 +76,9 @@ uvicorn main:app --reload
 - Added cache layer
 - Reduced repeated API calls
 - Improved response time
+
+## Day 11 – Rate Limiting
+
+- Added request throttling
+- Limited API calls per user
+- Improved system stability

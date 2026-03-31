@@ -78,3 +78,72 @@
 2026-03-31 17:40:55,330 - INFO - Cache hit
 2026-03-31 17:40:55,579 - INFO - Incoming request: Database connection pool exhausted
 2026-03-31 17:40:55,579 - INFO - Cache hit
+2026-03-31 17:49:05,745 - INFO - Incoming request: Database connection pool exhausted
+2026-03-31 17:49:05,747 - INFO - Cache hit
+2026-03-31 17:49:08,847 - INFO - Incoming request: Database connection pool exhausted
+2026-03-31 17:49:08,847 - INFO - Cache hit
+2026-03-31 17:49:09,464 - INFO - Incoming request: Database connection pool exhausted
+2026-03-31 17:49:09,464 - INFO - Cache hit
+2026-03-31 17:49:10,043 - INFO - Incoming request: Database connection pool exhausted
+2026-03-31 17:49:10,043 - INFO - Cache hit
+2026-03-31 17:49:10,530 - INFO - Incoming request: Database connection pool exhausted
+2026-03-31 17:49:10,530 - INFO - Cache hit
+2026-03-31 17:49:11,093 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-03-31 17:49:27,876 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-03-31 17:50:43,828 - INFO - Incoming request: Database connection pool exhausted
+2026-03-31 17:50:43,828 - INFO - Client IP: 127.0.0.1
+2026-03-31 17:50:43,840 - INFO - Cache hit
+2026-03-31 17:50:44,727 - INFO - Incoming request: Database connection pool exhausted
+2026-03-31 17:50:44,727 - INFO - Client IP: 127.0.0.1
+2026-03-31 17:50:44,727 - INFO - Cache hit
+2026-03-31 17:50:59,045 - INFO - Incoming request: Database connection pool exhausted issue
+2026-03-31 17:50:59,045 - INFO - Client IP: 127.0.0.1
+2026-03-31 17:51:00,858 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-31 17:51:01,734 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-31 17:51:02,100 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-31 17:51:02,305 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-31 17:51:02,501 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-31 17:51:02,700 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-31 17:51:02,917 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-31 17:51:03,567 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-31 17:51:03,816 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-31 17:51:04,150 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-31 17:51:04,483 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-31 17:51:04,666 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-31 17:51:05,050 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-03-31 17:51:07,408 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-03-31 17:51:07,418 - INFO - Response: {'issue': 'Database connection pool exhausted', 'root_causes': ['High volume of concurrent requests', 'Inefficient database queries leading to long connection hold times'], 'solutions': ['Increase the size of the database connection pool', 'Optimize database queries to reduce execution time']}
+2026-03-31 17:51:07,418 - INFO - Execution time: 8.37s
+2026-03-31 17:51:44,395 - INFO - Incoming request: Database connection pool exhausted issue
+2026-03-31 17:51:44,395 - INFO - Client IP: 127.0.0.1
+2026-03-31 17:51:44,395 - INFO - Cache hit
+2026-03-31 17:51:45,267 - INFO - Incoming request: Database connection pool exhausted issue
+2026-03-31 17:51:45,267 - INFO - Client IP: 127.0.0.1
+2026-03-31 17:51:45,268 - INFO - Cache hit
+2026-03-31 17:51:46,266 - INFO - Incoming request: Database connection pool exhausted issue
+2026-03-31 17:51:46,266 - INFO - Client IP: 127.0.0.1
+2026-03-31 17:51:46,266 - INFO - Cache hit
+2026-03-31 17:51:47,038 - INFO - Incoming request: Database connection pool exhausted issue
+2026-03-31 17:51:47,038 - INFO - Client IP: 127.0.0.1
+2026-03-31 17:51:47,038 - INFO - Cache hit
+2026-03-31 17:51:55,407 - INFO - Incoming request: Database connection pool exhausted issue
+2026-03-31 17:51:55,409 - INFO - Client IP: 127.0.0.1
+2026-03-31 17:51:55,409 - INFO - Cache hit
+2026-03-31 17:52:02,056 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-03-31 17:52:04,321 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-03-31 17:54:02,125 - INFO - Incoming request: Database connection pool exhausted issue
+2026-03-31 17:54:02,125 - INFO - Client IP: 127.0.0.1
+2026-03-31 17:54:02,125 - INFO - Cache hit
+2026-03-31 17:54:07,716 - INFO - Incoming request: Database connection pool exhausted issue
+2026-03-31 17:54:07,716 - INFO - Client IP: 127.0.0.1
+2026-03-31 17:54:07,716 - INFO - Cache hit
+2026-03-31 17:54:09,354 - INFO - Incoming request: Database connection pool exhausted issue
+2026-03-31 17:54:09,354 - INFO - Client IP: 127.0.0.1
+2026-03-31 17:54:09,354 - INFO - Cache hit
+2026-03-31 17:54:09,840 - INFO - Incoming request: Database connection pool exhausted issue
+2026-03-31 17:54:09,840 - INFO - Client IP: 127.0.0.1
+2026-03-31 17:54:09,842 - INFO - Cache hit
+2026-03-31 17:54:10,301 - INFO - Incoming request: Database connection pool exhausted issue
+2026-03-31 17:54:10,301 - INFO - Client IP: 127.0.0.1
+2026-03-31 17:54:10,301 - INFO - Cache hit
+2026-03-31 17:54:11,909 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log

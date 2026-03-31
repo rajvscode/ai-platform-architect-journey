@@ -10,5 +10,16 @@
       "Optimize database queries to reduce the number of concurrent requests",
       "Implement connection pooling best practices"
     ]
+  },
+  "Database connection pool exhausted issue": {
+    "issue": "Database connection pool exhausted",
+    "root_causes": [
+      "High volume of concurrent requests",
+      "Inefficient database queries leading to long connection hold times"
+    ],
+    "solutions": [
+      "Increase the size of the database connection pool",
+      "Optimize database queries to reduce execution time"
+    ]
   }
 }

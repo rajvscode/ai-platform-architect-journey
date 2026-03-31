@@ -5,11 +5,17 @@ from rag import search_similar
 from rag import search_similar, save_document
 from logger import logger
 from cache import get_from_cache, save_to_cache
+from slowapi import Limiter
+from slowapi.util import get_remote_address
+from fastapi import Request
 import time
 import os
 import json
 
 app = FastAPI()
+
+limiter = Limiter(key_func=get_remote_address)
+app.state.limiter = limiter
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -67,29 +73,32 @@ Current Log:
 
 
 @app.post("/analyze-log")
-def analyze(request: LogRequest):
+@limiter.limit("5/minute")
+def analyze(request: Request, body: LogRequest):
     start_time = time.time()
 
-    logger.info(f"Incoming request: {request.log}")
+    logger.info(f"Incoming request: {body.log}")
+
+    logger.info(f"Client IP: {request.client.host}")
 
     # 🔥 Step 1: Check cache
-    cached = get_from_cache(request.log)
+    cached = get_from_cache(body.log)
     if cached:
         logger.info("Cache hit")
         return cached
 
     try:
-        result = analyze_log(request.log, request.context)
+        result = analyze_log(body.log, body.context)
 
         # 🔥 Step 2: Save to cache
-        save_to_cache(request.log, result)
+        save_to_cache(body.log, result)
 
         duration = time.time() - start_time
 
         logger.info(f"Response: {result}")
         logger.info(f"Execution time: {duration:.2f}s")
 
-        save_document(request.log)
+        save_document(body.log)
 
         return result
 
