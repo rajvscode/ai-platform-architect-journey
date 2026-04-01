@@ -88,3 +88,9 @@ uvicorn main:app --reload
 - Added API key authentication
 - Secured endpoints
 - Restricted unauthorized access
+
+## Day 13 – Clean Architecture
+
+- Separated API, service, and core layers
+- Improved maintainability
+- Structured system like production code
