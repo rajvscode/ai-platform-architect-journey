@@ -100,3 +100,9 @@ uvicorn main:app --reload
 - Converted API to async
 - Improved concurrency handling
 - Reduced blocking operations
+
+## Day 15 – Background Processing
+
+- Added async background task execution
+- Improved response time
+- Introduced event-driven architecture pattern

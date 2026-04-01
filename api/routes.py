@@ -2,18 +2,24 @@ from core.limiter import limiter
 from core.models import LogRequest
 from core.security import validate_api_key
 from logger import logger
-from cache import get_from_cache, save_to_cache
-from fastapi import APIRouter, Request, Header
-from rag import save_document
-from service.analyzer import analyze_log
+from cache import get_from_cache
+from fastapi import APIRouter, Request, Header, BackgroundTasks
+from service.worker import process_log_async
 import time
 import asyncio
+
 
 router = APIRouter()
 
 @router.post("/analyze-log")
 @limiter.limit("5/minute")
-async def analyze(request: Request, body: LogRequest, x_api_key: str = Header(...)):
+async def analyze(
+    request: Request,
+    body: LogRequest,
+    background_tasks: BackgroundTasks,
+    x_api_key: str = Header(...)
+    ):
+
     validate_api_key(x_api_key)
 
     start_time = time.time()
@@ -26,23 +32,12 @@ async def analyze(request: Request, body: LogRequest, x_api_key: str = Header(..
     cached = await asyncio.to_thread(get_from_cache, body.log)
     if cached:
         logger.info("Cache hit")
-        return cached
+        return {"status": "completed", "data": cached}
 
-    try:
-        result = await asyncio.to_thread(analyze_log, body.log, body.context)
+    # 🔥 Add background task
+    background_tasks.add_task(process_log_async, body.log, body.context)
 
-        # 🔥 Step 2: Save to cache
-        await asyncio.to_thread(save_to_cache, body.log, result)
-        await asyncio.to_thread(save_document, body.log)
-
-        duration = time.time() - start_time
-
-        logger.info(f"Response: {result}")
-        logger.info(f"Execution time: {duration:.2f}s")
-
-        return result
-
-    except Exception as e:
-        logger.error(f"Error: {str(e)}")
-        return {"error": "Internal server error"}
-
+    return {
+        "status": "processing",
+        "message": "Request accepted and processing in background"
+    }

@@ -1,6 +1,8 @@
 from core.config import client
-from rag import search_similar, save_document
+from rag import search_similar
 import json
+
+
 
 def analyze_log(log_text, context_logs):
     retrieved_docs = search_similar(log_text, threshold=0.8)
