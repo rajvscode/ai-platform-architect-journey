@@ -94,3 +94,9 @@ uvicorn main:app --reload
 - Separated API, service, and core layers
 - Improved maintainability
 - Structured system like production code
+
+## Day 14 – Async Processing
+
+- Converted API to async
+- Improved concurrency handling
+- Reduced blocking operations

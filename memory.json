@@ -14,5 +14,8 @@
   "Database connection pool exhausted issue",
   "string",
   "Database connection pool exhausted issues",
-  "payment timeout"
+  "payment timeout",
+  "payment timeouts",
+  "payment ebay timeout",
+  "payment Paypal timeout"
 ]

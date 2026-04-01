@@ -7,12 +7,13 @@ from fastapi import APIRouter, Request, Header
 from rag import save_document
 from service.analyzer import analyze_log
 import time
+import asyncio
 
 router = APIRouter()
 
 @router.post("/analyze-log")
 @limiter.limit("5/minute")
-def analyze(request: Request, body: LogRequest, x_api_key: str = Header(...)):
+async def analyze(request: Request, body: LogRequest, x_api_key: str = Header(...)):
     validate_api_key(x_api_key)
 
     start_time = time.time()
@@ -22,17 +23,17 @@ def analyze(request: Request, body: LogRequest, x_api_key: str = Header(...)):
     logger.info(f"Client IP: {request.client.host}")
 
     # 🔥 Step 1: Check cache
-    cached = get_from_cache(body.log)
+    cached = await asyncio.to_thread(get_from_cache, body.log)
     if cached:
         logger.info("Cache hit")
         return cached
 
     try:
-        result = analyze_log(body.log, body.context)
+        result = await asyncio.to_thread(analyze_log, body.log, body.context)
 
         # 🔥 Step 2: Save to cache
-        save_to_cache(body.log, result)
-        save_document(body.log)
+        await asyncio.to_thread(save_to_cache, body.log, result)
+        await asyncio.to_thread(save_document, body.log)
 
         duration = time.time() - start_time
 

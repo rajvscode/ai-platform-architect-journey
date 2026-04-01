@@ -232,3 +232,76 @@
 2026-04-01 13:08:38,253 - INFO - Execution time: 9.77s
 2026-04-01 13:08:58,316 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
 2026-04-01 13:08:58,754 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-01 13:39:11,255 - INFO - Loading faiss with AVX2 support.
+2026-04-01 13:39:11,323 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-01 13:40:03,104 - INFO - Incoming request: payment timeout
+2026-04-01 13:40:03,104 - INFO - Client IP: 127.0.0.1
+2026-04-01 13:40:03,104 - INFO - Cache hit
+2026-04-01 13:40:29,149 - INFO - Incoming request: payment timeouts
+2026-04-01 13:40:29,149 - INFO - Client IP: 127.0.0.1
+2026-04-01 13:40:31,392 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:32,094 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:32,418 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:33,697 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:34,351 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:35,058 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:35,335 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:35,664 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:36,048 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:36,377 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:36,567 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:37,206 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:37,413 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:37,831 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:38,192 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:38,607 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:38,940 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:40:42,090 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 13:40:42,107 - INFO - Response: {'issue': 'payment timeout', 'root_causes': ['network latency', 'service overload'], 'solutions': ['optimize API response times', 'increase service capacity']}
+2026-04-01 13:40:42,107 - INFO - Execution time: 12.96s
+2026-04-01 13:41:50,431 - INFO - Incoming request: payment ebay timeout
+2026-04-01 13:41:50,431 - INFO - Client IP: 127.0.0.1
+2026-04-01 13:41:50,841 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:51,199 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:51,418 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:51,623 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:51,833 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:52,237 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:52,442 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:52,647 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:52,849 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:52,876 - INFO - Incoming request: payment Paypal timeout
+2026-04-01 13:41:52,876 - INFO - Client IP: 127.0.0.1
+2026-04-01 13:41:53,166 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:53,255 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:53,366 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:53,582 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:53,682 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:53,965 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:53,965 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:54,329 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:54,416 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:54,627 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:54,682 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:54,839 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:54,898 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:55,199 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:55,514 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:55,537 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:55,714 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:55,855 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:56,177 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:56,373 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:56,574 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:56,957 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:57,294 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:57,676 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:57,869 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:58,074 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:58,396 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 13:41:59,102 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 13:41:59,108 - INFO - Response: {'issue': 'payment ebay timeout', 'root_causes': ['network latency affecting communication with payment service', 'high load on the payment processing system'], 'solutions': ['implement retries with exponential backoff for payment requests', 'optimize the payment service for scalability and performance']}
+2026-04-01 13:41:59,108 - INFO - Execution time: 8.68s
+2026-04-01 13:42:01,059 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 13:42:01,062 - INFO - Response: {'issue': 'payment Paypal timeout', 'root_causes': ['Network latency or connectivity issues with the Paypal API', 'Inadequate timeout settings for payment requests'], 'solutions': ['Implement retry logic with exponential backoff for Paypal API requests', 'Adjust timeout settings according to the average response time of the Paypal API']}
+2026-04-01 13:42:01,062 - INFO - Execution time: 8.19s
