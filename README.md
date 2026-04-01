@@ -112,3 +112,9 @@ uvicorn main:app --reload
 - Added job ID tracking
 - Implemented result retrieval API
 - Completed async workflow
+
+## Day 17 – Database Integration
+
+- Replaced JSON storage with SQLite
+- Added structured persistence layer
+- Improved scalability and reliability

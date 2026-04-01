@@ -447,3 +447,24 @@
 2026-04-01 16:41:43,708 - INFO - Incoming request: payment ebay timeout2
 2026-04-01 16:41:43,708 - INFO - Client IP: 127.0.0.1
 2026-04-01 16:41:43,708 - INFO - Cache hit
+2026-04-01 17:12:20,974 - INFO - Loading faiss with AVX2 support.
+2026-04-01 17:12:20,985 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-01 17:13:00,822 - INFO - Incoming request: payment ebay2 timeout2
+2026-04-01 17:13:00,822 - INFO - Client IP: 127.0.0.1
+2026-04-01 17:13:00,835 - INFO - Processing job: 20188223-300f-4f25-b24a-773595c8084b
+2026-04-01 17:13:03,488 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 17:13:03,536 - INFO - Completed job: 20188223-300f-4f25-b24a-773595c8084b
+2026-04-01 17:14:41,475 - INFO - Incoming request: payment paypal usa timeout2
+2026-04-01 17:14:41,475 - INFO - Client IP: 127.0.0.1
+2026-04-01 17:14:41,475 - INFO - Processing job: 3bfe2374-26e8-49b3-bf7a-ed88946675e6
+2026-04-01 17:14:42,725 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 17:14:43,624 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 17:14:44,101 - INFO - Incoming request: payment ingenico usa timeout2
+2026-04-01 17:14:44,101 - INFO - Client IP: 127.0.0.1
+2026-04-01 17:14:44,105 - INFO - Processing job: 7891c12d-114a-4c71-8e98-455981700613
+2026-04-01 17:14:44,449 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 17:14:44,775 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 17:14:45,872 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 17:14:45,893 - INFO - Completed job: 3bfe2374-26e8-49b3-bf7a-ed88946675e6
+2026-04-01 17:14:47,622 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 17:14:47,639 - INFO - Completed job: 7891c12d-114a-4c71-8e98-455981700613

@@ -1,26 +1,28 @@
+from core.db import SessionLocal
+from core.db_models import LogMemory
 from openai import OpenAI
 import os
 import numpy as np
 import faiss
 import json
+import uuid
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-MEMORY_FILE = "memory.json"
-
-
 def load_documents():
-    with open(MEMORY_FILE, "r") as f:
-        return json.load(f)
+    db = SessionLocal()
+    rows = db.query(LogMemory).all()
+    db.close()
+
+    return [row.log for row in rows]
 
 
 def save_document(new_doc):
-    docs = load_documents()
-    docs.append(new_doc)
-
-    with open(MEMORY_FILE, "w") as f:
-        json.dump(docs, f, indent=2)
-
+    db = SessionLocal()
+    db_log = LogMemory(id=str(uuid.uuid4()), log=new_doc)
+    db.add(db_log)
+    db.commit()
+    db.close()
 
 def get_embedding(text):
     response = client.embeddings.create(
@@ -31,23 +33,30 @@ def get_embedding(text):
 
 
 def build_index(docs):
+    if not docs:
+        return None, []
+
     vectors = np.array([get_embedding(doc) for doc in docs]).astype("float32")
     index = faiss.IndexFlatL2(len(vectors[0]))
     index.add(vectors)
     return index, docs
 
 
-def search_similar(query, threshold=0.5, k=5):
+def search_similar(query, threshold=0.7, k=5):
     docs = load_documents()
+
+    if not docs:
+        return []
+
     index, docs = build_index(docs)
 
     query_vector = np.array([get_embedding(query)]).astype("float32")
-    distances, indices = index.search(query_vector, k=k)
+    distances, indices = index.search(query_vector, k=min(k, len(docs)))
 
     results = []
 
     for dist, idx in zip(distances[0], indices[0]):
-        similarity = 1 - dist  # convert distance → similarity
+        similarity = 1 / (1 + dist)  # safer than 1 - dist
 
         if similarity >= threshold:
             results.append(docs[idx])

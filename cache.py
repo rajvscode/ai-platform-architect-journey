@@ -1,23 +1,22 @@
+from core.db import SessionLocal
+from core.db_models import Cache
 import json
 
-CACHE_FILE = "cache.json"
-
-def load_cache():
-    try:
-        with open(CACHE_FILE, "r") as f:
-            return json.load(f)
-    except:
-        return {}
-
-def save_cache(cache):
-    with open(CACHE_FILE, "w") as f:
-        json.dump(cache, f, indent=2)
 
 def get_from_cache(log):
-    cache = load_cache()
-    return cache.get(log)
+    db = SessionLocal()
+    res = db.query(Cache).filter(Cache.key == log).first()
+    db.close()
+
+    if not res:
+        return None
+
+    return json.loads(res.value)
+
 
 def save_to_cache(log, result):
-    cache = load_cache()
-    cache[log] = result
-    save_cache(cache)
+    db = SessionLocal()
+    db_cache = Cache(key=log, value=json.dumps(result))
+    db.merge(db_cache)
+    db.commit()
+    db.close()
