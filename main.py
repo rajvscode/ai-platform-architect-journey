@@ -8,11 +8,13 @@ from cache import get_from_cache, save_to_cache
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 from fastapi import Request
+from fastapi import Header, HTTPException
 import time
 import os
 import json
 
 app = FastAPI()
+API_KEY = "my-secret-key"
 
 limiter = Limiter(key_func=get_remote_address)
 app.state.limiter = limiter
@@ -74,7 +76,9 @@ Current Log:
 
 @app.post("/analyze-log")
 @limiter.limit("5/minute")
-def analyze(request: Request, body: LogRequest):
+def analyze(request: Request, body: LogRequest, x_api_key: str = Header(...)):
+    validate_api_key(x_api_key)
+
     start_time = time.time()
 
     logger.info(f"Incoming request: {body.log}")
@@ -92,16 +96,19 @@ def analyze(request: Request, body: LogRequest):
 
         # 🔥 Step 2: Save to cache
         save_to_cache(body.log, result)
+        save_document(body.log)
 
         duration = time.time() - start_time
 
         logger.info(f"Response: {result}")
         logger.info(f"Execution time: {duration:.2f}s")
 
-        save_document(body.log)
-
         return result
 
     except Exception as e:
         logger.error(f"Error: {str(e)}")
         return {"error": "Internal server error"}
+
+def validate_api_key(x_api_key: str = Header(...)):
+    if x_api_key != API_KEY:
+        raise HTTPException(status_code=401, detail="Unauthorized")

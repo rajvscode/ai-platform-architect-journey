@@ -82,3 +82,9 @@ uvicorn main:app --reload
 - Added request throttling
 - Limited API calls per user
 - Improved system stability
+
+## Day 12 – Security
+
+- Added API key authentication
+- Secured endpoints
+- Restricted unauthorized access

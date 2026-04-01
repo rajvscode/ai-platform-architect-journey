@@ -21,5 +21,20 @@
       "Increase the size of the database connection pool",
       "Optimize database queries to reduce execution time"
     ]
+  },
+  "string": {
+    "error": "Invalid JSON",
+    "raw": "```json\n{\n  \"issue\": \"Kafka message not being delivered to consumers\",\n  \"root_causes\": [\"Consumer group rebalancing causing message delays\", \"Insufficient partitions for the topic leading to bottlenecks\"],\n  \"solutions\": [\"Increase the number of partitions for the topic\", \"Optimize consumer group configuration for better load distribution\"]\n}\n```"
+  },
+  "Database connection pool exhausted issues": {
+    "issue": "Database connection pool exhausted",
+    "root_causes": [
+      "High volume of concurrent requests exceeding pool size",
+      "Long-running database queries blocking connections"
+    ],
+    "solutions": [
+      "Increase the size of the database connection pool",
+      "Optimize database queries to reduce execution time"
+    ]
   }
 }

@@ -11,5 +11,7 @@
   "payment timeout",
   "Database connection pool exhausted",
   "Database connection pool exhausted",
-  "Database connection pool exhausted issue"
+  "Database connection pool exhausted issue",
+  "string",
+  "Database connection pool exhausted issues"
 ]

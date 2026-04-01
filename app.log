@@ -147,3 +147,42 @@
 2026-03-31 17:54:10,301 - INFO - Client IP: 127.0.0.1
 2026-03-31 17:54:10,301 - INFO - Cache hit
 2026-03-31 17:54:11,909 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-01 12:16:03,507 - INFO - Incoming request: string
+2026-04-01 12:16:03,507 - INFO - Client IP: 127.0.0.1
+2026-04-01 12:16:06,509 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:16:08,555 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:16:08,872 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:16:09,189 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:16:09,522 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:16:09,805 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:16:10,005 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:16:10,405 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:16:10,605 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:16:11,039 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:16:11,370 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:16:11,738 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:16:12,072 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:16:12,488 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:16:15,427 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 12:16:15,443 - INFO - Response: {'error': 'Invalid JSON', 'raw': '```json\n{\n  "issue": "Kafka message not being delivered to consumers",\n  "root_causes": ["Consumer group rebalancing causing message delays", "Insufficient partitions for the topic leading to bottlenecks"],\n  "solutions": ["Increase the number of partitions for the topic", "Optimize consumer group configuration for better load distribution"]\n}\n```'}
+2026-04-01 12:16:15,444 - INFO - Execution time: 11.94s
+2026-04-01 12:17:06,806 - INFO - Incoming request: Database connection pool exhausted issues
+2026-04-01 12:17:06,806 - INFO - Client IP: 127.0.0.1
+2026-04-01 12:17:07,451 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:17:07,754 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:17:08,075 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:17:08,318 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:17:08,669 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:17:08,870 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:17:09,286 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:17:09,592 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:17:09,801 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:17:10,002 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:17:10,401 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:17:10,734 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:17:10,933 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:17:11,234 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:17:11,584 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 12:17:14,400 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 12:17:14,400 - INFO - Response: {'issue': 'Database connection pool exhausted', 'root_causes': ['High volume of concurrent requests exceeding pool size', 'Long-running database queries blocking connections'], 'solutions': ['Increase the size of the database connection pool', 'Optimize database queries to reduce execution time']}
+2026-04-01 12:17:14,413 - INFO - Execution time: 7.59s
