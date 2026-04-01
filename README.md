@@ -106,3 +106,9 @@ uvicorn main:app --reload
 - Added async background task execution
 - Improved response time
 - Introduced event-driven architecture pattern
+
+## Day 16 – Async Job System
+
+- Added job ID tracking
+- Implemented result retrieval API
+- Completed async workflow

@@ -5,6 +5,8 @@ from logger import logger
 from cache import get_from_cache
 from fastapi import APIRouter, Request, Header, BackgroundTasks
 from service.worker import process_log_async
+from result_store import save_result, get_result
+import uuid
 import time
 import asyncio
 
@@ -35,9 +37,28 @@ async def analyze(
         return {"status": "completed", "data": cached}
 
     # 🔥 Add background task
-    background_tasks.add_task(process_log_async, body.log, body.context)
+    job_id = str(uuid.uuid4())
+
+    background_tasks.add_task(
+        process_log_async,
+        body.log,
+        body.context,
+        job_id
+    )
 
     return {
         "status": "processing",
-        "message": "Request accepted and processing in background"
+        "job_id": job_id
+    }
+
+@router.get("/result/{job_id}")
+def fetch_result(job_id: str):
+    result = get_result(job_id)
+
+    if not result:
+        return {"status": "processing"}
+
+    return {
+        "status": "completed",
+        "data": result
     }

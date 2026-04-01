@@ -20,5 +20,7 @@
   "payment Paypal timeout",
   "payment ebay timeout1",
   "payment paypal timeout1",
-  "payment Ingenico timeout1"
+  "payment Ingenico timeout1",
+  "payment ebay timeout2",
+  "payment paypal timeout2"
 ]

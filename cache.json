@@ -116,5 +116,28 @@
       "Monitor system performance and optimize resource allocation to minimize latency",
       "Investigate Kafka configurations to ensure proper topic partitioning and replication strategies are in place"
     ]
+  },
+  "payment ebay timeout2": {
+    "issue": "Payment processing timeout for eBay transactions",
+    "root_causes": [
+      "Increased latency in Kafka message processing",
+      "Network issues affecting connection to eBay's payment gateway"
+    ],
+    "solutions": [
+      "Optimize Kafka consumer settings to reduce processing time",
+      "Implement retry mechanisms for failed payment requests",
+      "Monitor network performance and address any issues promptly"
+    ]
+  },
+  "payment paypal timeout2": {
+    "issue": "payment Paypal timeout",
+    "root_causes": [
+      "Network latency or outages between the service and PayPal APIs",
+      "High load on the payment processing service causing delays"
+    ],
+    "solutions": [
+      "Implement retries with exponential backoff for PayPal transactions",
+      "Optimize the payment processing service to handle higher loads effectively"
+    ]
   }
 }

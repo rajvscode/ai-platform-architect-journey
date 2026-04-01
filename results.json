@@ -1,0 +1,25 @@
+{
+  "1c91c26a-7b90-4b1d-a4a2-0fc157646e52": {
+    "issue": "Payment processing timeout for eBay transactions",
+    "root_causes": [
+      "Increased latency in Kafka message processing",
+      "Network issues affecting connection to eBay's payment gateway"
+    ],
+    "solutions": [
+      "Optimize Kafka consumer settings to reduce processing time",
+      "Implement retry mechanisms for failed payment requests",
+      "Monitor network performance and address any issues promptly"
+    ]
+  },
+  "2c194e03-84f1-46b6-a8f8-394ebdc112c2": {
+    "issue": "payment Paypal timeout",
+    "root_causes": [
+      "Network latency or outages between the service and PayPal APIs",
+      "High load on the payment processing service causing delays"
+    ],
+    "solutions": [
+      "Implement retries with exponential backoff for PayPal transactions",
+      "Optimize the payment processing service to handle higher loads effectively"
+    ]
+  }
+}
