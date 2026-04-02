@@ -468,3 +468,123 @@
 2026-04-01 17:14:45,893 - INFO - Completed job: 3bfe2374-26e8-49b3-bf7a-ed88946675e6
 2026-04-01 17:14:47,622 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
 2026-04-01 17:14:47,639 - INFO - Completed job: 7891c12d-114a-4c71-8e98-455981700613
+2026-04-01 17:36:24,447 - INFO - Loading faiss with AVX2 support.
+2026-04-01 17:36:24,461 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-01 17:37:07,220 - INFO - Incoming request: Oracle Layoff reason
+2026-04-01 17:37:07,220 - INFO - Client IP: 127.0.0.1
+2026-04-01 17:37:07,230 - INFO - Processing job: 3b136a2d-a340-4546-b53d-8867fd500f9c
+2026-04-01 17:37:10,516 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 17:37:11,127 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 17:37:11,306 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 17:37:14,007 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 17:37:16,033 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 17:37:16,084 - INFO - Completed job: 3b136a2d-a340-4546-b53d-8867fd500f9c
+2026-04-01 17:38:02,116 - INFO - Incoming request: Oracle Layoff reason
+2026-04-01 17:38:02,116 - INFO - Client IP: 127.0.0.1
+2026-04-01 17:38:02,116 - INFO - Cache hit
+2026-04-01 17:38:56,060 - INFO - Incoming request: payment Ingenico timeout reasons
+2026-04-01 17:38:56,060 - INFO - Client IP: 127.0.0.1
+2026-04-01 17:38:56,060 - INFO - Processing job: 6d81a2ab-d2e0-4507-9010-554a6d5b81bc
+2026-04-01 17:38:56,609 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 17:38:56,940 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 17:38:57,295 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 17:38:57,942 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 17:38:58,273 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 17:39:02,263 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-01 17:39:02,286 - INFO - Completed job: 6d81a2ab-d2e0-4507-9010-554a6d5b81bc
+2026-04-01 18:56:27,498 - INFO - Loading faiss with AVX2 support.
+2026-04-01 18:56:27,547 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-01 18:56:31,232 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 18:56:33,750 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 18:56:34,084 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 18:56:34,421 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-01 18:56:34,933 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 11:46:23,158 - INFO - Loading faiss with AVX2 support.
+2026-04-02 11:46:23,205 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-02 11:46:23,800 - INFO - Retrying request to /embeddings in 0.471323 seconds
+2026-04-02 11:46:24,273 - INFO - Retrying request to /embeddings in 0.941202 seconds
+2026-04-02 11:52:54,180 - INFO - Loading faiss with AVX2 support.
+2026-04-02 11:52:54,225 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-02 11:52:57,139 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 11:52:59,187 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 11:52:59,514 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 11:52:59,799 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 11:53:00,004 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 11:53:48,482 - INFO - Incoming request: Oracle Layoff reason
+2026-04-02 11:53:48,483 - INFO - Client IP: 127.0.0.1
+2026-04-02 11:53:48,486 - INFO - Cache hit
+2026-04-02 11:54:06,440 - INFO - Incoming request: payment Ingenico timeout reasons
+2026-04-02 11:54:06,440 - INFO - Client IP: 127.0.0.1
+2026-04-02 11:54:06,441 - INFO - Cache hit
+2026-04-02 11:54:22,423 - INFO - Incoming request: payment Ingenico timeout sla reasons
+2026-04-02 11:54:22,423 - INFO - Client IP: 127.0.0.1
+2026-04-02 11:54:22,431 - INFO - Processing job: 672174b5-7322-4272-97f1-9c5621c8ca9d
+2026-04-02 11:54:23,163 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 11:54:27,283 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-02 11:56:23,493 - INFO - Incoming request: payment Ingenico timeout sla reasons
+2026-04-02 11:56:23,493 - INFO - Client IP: 127.0.0.1
+2026-04-02 11:56:23,494 - INFO - Cache hit
+2026-04-02 11:57:13,323 - INFO - Incoming request: payment Ingenico timeout latency reasons
+2026-04-02 11:57:13,324 - INFO - Client IP: 127.0.0.1
+2026-04-02 11:57:13,326 - INFO - Processing job: a4bc51d0-2c3c-4323-bdec-cb1b96807bf3
+2026-04-02 11:57:14,087 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 11:57:17,133 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-02 12:01:05,745 - INFO - Loading faiss with AVX2 support.
+2026-04-02 12:01:05,761 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-02 12:01:07,021 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:01:07,344 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:01:07,659 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:01:07,985 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:01:08,453 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:01:14,676 - INFO - Loading faiss with AVX2 support.
+2026-04-02 12:01:14,687 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-02 12:01:15,724 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:01:15,932 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:01:16,252 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:01:16,582 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:01:16,952 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:01:52,985 - INFO - Incoming request: payment ebay timeout latency reasons
+2026-04-02 12:01:52,985 - INFO - Client IP: 127.0.0.1
+2026-04-02 12:01:52,997 - INFO - Processing job: b968c5c8-6ae5-4f85-a186-389360657a00
+2026-04-02 12:01:53,246 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:01:56,079 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-02 12:01:56,094 - INFO - LLM result received for job: b968c5c8-6ae5-4f85-a186-389360657a00
+2026-04-02 12:01:56,107 - INFO - Saved to cache
+2026-04-02 12:01:56,107 - ERROR - \u274c Background job failed: b968c5c8-6ae5-4f85-a186-389360657a00, Error: name 'uuid' is not defined
+2026-04-02 12:03:28,627 - INFO - Loading faiss with AVX2 support.
+2026-04-02 12:03:28,639 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-02 12:03:29,768 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:03:29,978 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:03:30,302 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:03:30,687 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:03:31,097 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:03:32,416 - INFO - Loading faiss with AVX2 support.
+2026-04-02 12:03:32,429 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-02 12:03:33,368 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:03:33,758 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:03:33,969 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:03:34,373 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:03:34,713 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:03:38,142 - INFO - Loading faiss with AVX2 support.
+2026-04-02 12:03:38,153 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-02 12:03:38,918 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:03:39,302 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:03:39,644 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:03:40,006 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:03:40,414 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:04:08,710 - INFO - Incoming request: payment paypal timeout latency reasons
+2026-04-02 12:04:08,710 - INFO - Client IP: 127.0.0.1
+2026-04-02 12:04:08,718 - INFO - Processing job: cb677c87-73cd-457f-86d5-783e221a1f54
+2026-04-02 12:04:09,190 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:04:12,366 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-02 12:04:12,377 - INFO - LLM result received for job: cb677c87-73cd-457f-86d5-783e221a1f54
+2026-04-02 12:04:12,385 - INFO - Saved to cache
+2026-04-02 12:04:13,080 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:04:13,285 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:04:13,613 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:04:14,002 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:04:14,221 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:04:14,422 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:04:14,425 - INFO - Saved to memory
+2026-04-02 12:04:14,436 - INFO - Saved result for job: cb677c87-73cd-457f-86d5-783e221a1f54
+2026-04-02 12:04:14,436 - INFO - Completed job: cb677c87-73cd-457f-86d5-783e221a1f54

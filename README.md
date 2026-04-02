@@ -118,3 +118,9 @@ uvicorn main:app --reload
 - Replaced JSON storage with SQLite
 - Added structured persistence layer
 - Improved scalability and reliability
+
+## Day 18 – Vector Index Optimization
+
+- Built FAISS index at startup
+- Avoided rebuilding on each request
+- Improved retrieval performance

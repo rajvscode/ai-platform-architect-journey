@@ -1,21 +1,15 @@
-from core.db import SessionLocal
-from core.db_models import LogMemory
+import uuid
 from openai import OpenAI
 import os
 import numpy as np
 import faiss
-import json
-import uuid
+from core.db import SessionLocal
+from core.db_models import LogMemory
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-def load_documents():
-    db = SessionLocal()
-    rows = db.query(LogMemory).all()
-    db.close()
-
-    return [row.log for row in rows]
-
+index = None
+documents = []
 
 def save_document(new_doc):
     db = SessionLocal()
@@ -23,6 +17,16 @@ def save_document(new_doc):
     db.add(db_log)
     db.commit()
     db.close()
+
+    # 🔥 Refresh index
+    initialize_index()
+
+def load_documents():
+    db = SessionLocal()
+    rows = db.query(LogMemory).all()
+    db.close()
+    return [row.log for row in rows]
+
 
 def get_embedding(text):
     response = client.embeddings.create(
@@ -32,33 +36,44 @@ def get_embedding(text):
     return response.data[0].embedding
 
 
-def build_index(docs):
-    if not docs:
-        return None, []
+def initialize_index():
+    global index, documents
 
-    vectors = np.array([get_embedding(doc) for doc in docs]).astype("float32")
-    index = faiss.IndexFlatL2(len(vectors[0]))
-    index.add(vectors)
-    return index, docs
+    try:
+        documents = load_documents()
 
+        if not documents:
+            index = None
+            return
+
+        vectors = np.array([get_embedding(doc) for doc in documents]).astype("float32")
+
+        dimension = len(vectors[0])
+        index = faiss.IndexFlatL2(dimension)
+        index.add(vectors)
+
+        print("Vector index ready")
+
+    except Exception as e:
+        print("⚠️ Failed to initialize vector index:", str(e))
+        index = None
+        documents = []
 
 def search_similar(query, threshold=0.7, k=5):
-    docs = load_documents()
+    global index, documents
 
-    if not docs:
+    if index is None or not documents:
         return []
 
-    index, docs = build_index(docs)
-
     query_vector = np.array([get_embedding(query)]).astype("float32")
-    distances, indices = index.search(query_vector, k=min(k, len(docs)))
+    distances, indices = index.search(query_vector, k=min(k, len(documents)))
 
     results = []
 
     for dist, idx in zip(distances[0], indices[0]):
-        similarity = 1 / (1 + dist)  # safer than 1 - dist
+        similarity = 1 / (1 + dist)
 
         if similarity >= threshold:
-            results.append(docs[idx])
+            results.append(documents[idx])
 
     return results
