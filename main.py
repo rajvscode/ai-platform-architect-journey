@@ -12,4 +12,4 @@ app.include_router(router)
 def startup_event():
     print("Initializing vector index...")
     initialize_index()
-    print("Vector index ready")
+    print("Vector index ready in startup")

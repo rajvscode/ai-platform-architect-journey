@@ -27,6 +27,12 @@ def load_documents():
     db.close()
     return [row.log for row in rows]
 
+def get_embeddings_batch(texts):
+    response = client.embeddings.create(
+        model="text-embedding-3-small",
+        input=texts
+    )
+    return [item.embedding for item in response.data]
 
 def get_embedding(text):
     response = client.embeddings.create(
@@ -46,7 +52,8 @@ def initialize_index():
             index = None
             return
 
-        vectors = np.array([get_embedding(doc) for doc in documents]).astype("float32")
+        vectors = np.array(get_embeddings_batch(documents)).astype("float32")
+        # query_vector = np.array([get_embedding(query)]).astype("float32")
 
         dimension = len(vectors[0])
         index = faiss.IndexFlatL2(dimension)

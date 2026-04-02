@@ -588,3 +588,48 @@
 2026-04-02 12:04:14,425 - INFO - Saved to memory
 2026-04-02 12:04:14,436 - INFO - Saved result for job: cb677c87-73cd-457f-86d5-783e221a1f54
 2026-04-02 12:04:14,436 - INFO - Completed job: cb677c87-73cd-457f-86d5-783e221a1f54
+2026-04-02 12:36:05,355 - INFO - Loading faiss with AVX2 support.
+2026-04-02 12:36:05,367 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-02 12:36:06,984 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:37:12,092 - INFO - Incoming request: payment apple-pay timeout
+2026-04-02 12:37:12,092 - INFO - Client IP: 127.0.0.1
+2026-04-02 12:37:12,100 - INFO - Processing job: 8b244f2e-2408-4a23-baec-a01d4340c32c
+2026-04-02 12:37:13,218 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:37:16,915 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-02 12:37:16,928 - INFO - LLM result received for job: 8b244f2e-2408-4a23-baec-a01d4340c32c
+2026-04-02 12:37:16,944 - INFO - Saved to cache
+2026-04-02 12:37:17,600 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:37:17,603 - INFO - Saved to memory
+2026-04-02 12:37:17,614 - INFO - Saved result for job: 8b244f2e-2408-4a23-baec-a01d4340c32c
+2026-04-02 12:37:17,615 - INFO - Completed job: 8b244f2e-2408-4a23-baec-a01d4340c32c
+2026-04-02 12:39:28,869 - INFO - Loading faiss with AVX2 support.
+2026-04-02 12:39:28,884 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-02 12:39:29,806 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:39:51,871 - INFO - Incoming request: payment apple-pay timeout issue
+2026-04-02 12:39:51,871 - INFO - Client IP: 127.0.0.1
+2026-04-02 12:39:51,882 - INFO - Processing job: 43d8c667-e328-4782-8200-a77e7f1235b4
+2026-04-02 12:39:52,276 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:39:55,756 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-02 12:39:55,768 - INFO - LLM result received for job: 43d8c667-e328-4782-8200-a77e7f1235b4
+2026-04-02 12:39:55,780 - INFO - Saved to cache
+2026-04-02 12:39:56,018 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:39:56,036 - INFO - Saved to memory
+2026-04-02 12:39:56,047 - INFO - Saved result for job: 43d8c667-e328-4782-8200-a77e7f1235b4
+2026-04-02 12:39:56,047 - INFO - Completed job: 43d8c667-e328-4782-8200-a77e7f1235b4
+2026-04-02 12:40:28,577 - INFO - Incoming request: payment apple-pay timeout issue
+2026-04-02 12:40:28,577 - INFO - Client IP: 127.0.0.1
+2026-04-02 12:40:28,579 - INFO - Cache hit
+2026-04-02 12:40:31,715 - INFO - Incoming request: payment apple-pay timeout issue
+2026-04-02 12:40:31,715 - INFO - Client IP: 127.0.0.1
+2026-04-02 12:40:31,717 - INFO - Cache hit
+2026-04-02 12:40:38,641 - INFO - Incoming request: payment apple-pay timeout issues
+2026-04-02 12:40:38,641 - INFO - Client IP: 127.0.0.1
+2026-04-02 12:40:38,643 - INFO - Processing job: 15c0234e-56e8-420b-a112-61b3de5fff3d
+2026-04-02 12:40:39,228 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:40:40,889 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-02 12:40:40,892 - INFO - LLM result received for job: 15c0234e-56e8-420b-a112-61b3de5fff3d
+2026-04-02 12:40:40,898 - INFO - Saved to cache
+2026-04-02 12:40:41,170 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-02 12:40:41,277 - INFO - Saved to memory
+2026-04-02 12:40:41,285 - INFO - Saved result for job: 15c0234e-56e8-420b-a112-61b3de5fff3d
+2026-04-02 12:40:41,286 - INFO - Completed job: 15c0234e-56e8-420b-a112-61b3de5fff3d

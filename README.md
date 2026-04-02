@@ -124,3 +124,9 @@ uvicorn main:app --reload
 - Built FAISS index at startup
 - Avoided rebuilding on each request
 - Improved retrieval performance
+
+## Day 19 – Embedding Optimization
+
+- Implemented batch embeddings
+- Reduced API calls
+- Improved performance and cost efficiency
