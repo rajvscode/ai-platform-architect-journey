@@ -3,6 +3,7 @@ from logger import logger
 from rag import save_document
 from result_store import save_result
 from service.analyzer import analyze_log
+from service.tagger import detect_tag
 import time
 
 
@@ -17,8 +18,9 @@ def process_log_async(log, context, job_id):
         save_to_cache(log, result)
         logger.info("Saved to cache")
 
-        save_document(log, tag="payments")
-        logger.info("Saved to memory")
+        tag = detect_tag(log)
+        save_document(log, tag)
+        logger.info(f"Detected tag: {tag}")
 
         save_result(job_id, result)
         logger.info(f"Saved result for job: {job_id}")

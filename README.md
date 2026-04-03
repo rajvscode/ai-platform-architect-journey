@@ -148,3 +148,9 @@ uvicorn main:app --reload
 - Added tagging to documents
 - Enabled filtered RAG search
 - Improved relevance and accuracy
+
+## Day 23 – Auto Tagging
+
+- Added AI-based log classification
+- Automated tagging process
+- Improved retrieval accuracy

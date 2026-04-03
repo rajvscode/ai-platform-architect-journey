@@ -771,3 +771,23 @@
 2026-04-03 10:57:29,043 - INFO - Saved to memory
 2026-04-03 10:57:29,053 - INFO - Saved result for job: 1a38a09e-21f1-4c6c-9fd5-b375600fe742
 2026-04-03 10:57:29,053 - INFO - Completed job: 1a38a09e-21f1-4c6c-9fd5-b375600fe742
+2026-04-03 11:03:08,814 - INFO - Loading faiss with AVX2 support.
+2026-04-03 11:03:08,829 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 11:05:13,296 - INFO - Loading faiss with AVX2 support.
+2026-04-03 11:05:13,307 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 11:06:50,219 - INFO - Loading faiss with AVX2 support.
+2026-04-03 11:06:50,231 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 11:06:53,901 - INFO - Loading faiss with AVX2 support.
+2026-04-03 11:06:53,912 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 11:07:15,179 - INFO - Incoming request: Kafka consumer lag increasing
+2026-04-03 11:07:15,179 - INFO - Client IP: 127.0.0.1
+2026-04-03 11:07:15,203 - INFO - Processing job: 0b6b0db6-f7d0-407c-b1c2-ced299313b79
+2026-04-03 11:07:16,752 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 11:07:20,649 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 11:07:20,678 - INFO - LLM result received for job: 0b6b0db6-f7d0-407c-b1c2-ced299313b79
+2026-04-03 11:07:20,688 - INFO - Saved to cache
+2026-04-03 11:07:21,872 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 11:07:22,793 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 11:07:22,815 - INFO - Detected tag: kafka
+2026-04-03 11:07:22,827 - INFO - Saved result for job: 0b6b0db6-f7d0-407c-b1c2-ced299313b79
+2026-04-03 11:07:22,827 - INFO - Completed job: 0b6b0db6-f7d0-407c-b1c2-ced299313b79
