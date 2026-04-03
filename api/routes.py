@@ -4,6 +4,7 @@ from core.security import validate_api_key
 from logger import logger
 from cache import get_from_cache
 from fastapi import APIRouter, Request, Header, BackgroundTasks
+from metrics import get_metrics, record_failure, record_feedback, record_latency, record_request, record_success
 from service.worker import process_log_async
 from result_store import save_feedback, save_result, get_result
 from rag import save_document
@@ -21,36 +22,57 @@ async def analyze(
     body: LogRequest,
     background_tasks: BackgroundTasks,
     x_api_key: str = Header(...)
-    ):
-
+):
     validate_api_key(x_api_key)
 
     start_time = time.time()
+    record_request()
 
     logger.info(f"Incoming request: {body.log}")
-
     logger.info(f"Client IP: {request.client.host}")
 
-    # 🔥 Step 1: Check cache
-    cached = await asyncio.to_thread(get_from_cache, body.log)
-    if cached:
-        logger.info("Cache hit")
-        return {"status": "completed", "data": cached}
+    try:
+        # 🔥 Step 1: Check cache
+        cached = await asyncio.to_thread(get_from_cache, body.log)
+        if cached:
+            logger.info("Cache hit")
 
-    # 🔥 Add background task
-    job_id = str(uuid.uuid4())
+            record_success()
+            latency = time.time() - start_time
+            record_latency(latency)
 
-    background_tasks.add_task(
-        process_log_async,
-        body.log,
-        body.context,
-        job_id
-    )
+            return {"status": "completed", "data": cached}
 
-    return {
-        "status": "processing",
-        "job_id": job_id
-    }
+        # 🔥 Step 2: Create job
+        job_id = str(uuid.uuid4())
+
+        # 🔥 Step 3: Background processing
+        background_tasks.add_task(
+            process_log_async,
+            body.log,
+            body.context,
+            job_id
+        )
+
+        # 👉 IMPORTANT:
+        # This is NOT success of processing, only acceptance
+        latency = time.time() - start_time
+        record_latency(latency)
+
+        return {
+            "status": "processing",
+            "job_id": job_id
+        }
+
+    except Exception as e:
+        logger.error(f"API failed: {str(e)}")
+
+        record_failure()
+
+        latency = time.time() - start_time
+        record_latency(latency)
+
+        return {"error": "Internal server error"}
 
 @router.get("/result/{job_id}")
 def fetch_result(job_id: str):
@@ -81,7 +103,15 @@ def add_feedback(job_id: str, feedback: str, x_api_key: str = Header(...)):
 
     save_feedback(job_id, feedback)
 
+    record_feedback()
+
     return {
         "status": "success",
         "message": "Feedback stored"
     }
+
+@router.get("/metrics")
+def metrics_endpoint(x_api_key: str = Header(...)):
+    validate_api_key(x_api_key)
+
+    return get_metrics()

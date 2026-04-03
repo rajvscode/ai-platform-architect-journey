@@ -160,3 +160,9 @@ uvicorn main:app --reload
 - Added feedback API
 - Enabled system learning
 - Improved future responses using feedback
+
+## Day 25 – Metrics & Evaluation
+
+- Added request tracking
+- Measured latency and success rate
+- Introduced AI evaluation metrics

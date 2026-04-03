@@ -1,3 +1,4 @@
+from metrics import record_success, record_failure
 from cache import save_to_cache
 from logger import logger
 from rag import save_document
@@ -5,7 +6,6 @@ from result_store import save_result
 from service.analyzer import analyze_log
 from service.tagger import detect_tag
 import time
-
 
 def process_log_async(log, context, job_id):
     try:
@@ -20,12 +20,15 @@ def process_log_async(log, context, job_id):
 
         tag = detect_tag(log)
         save_document(log, tag)
-        logger.info(f"Detected tag: {tag}")
+        logger.info(f"Saved to memory with tag: {tag}")
 
         save_result(job_id, result)
         logger.info(f"Saved result for job: {job_id}")
 
+        record_success()  # 🔥 REAL SUCCESS
+
         logger.info(f"Completed job: {job_id}")
 
     except Exception as e:
+        record_failure()  # 🔥 REAL FAILURE
         logger.error(f"❌ Background job failed: {job_id}, Error: {str(e)}")
