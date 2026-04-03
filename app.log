@@ -791,3 +791,32 @@
 2026-04-03 11:07:22,815 - INFO - Detected tag: kafka
 2026-04-03 11:07:22,827 - INFO - Saved result for job: 0b6b0db6-f7d0-407c-b1c2-ced299313b79
 2026-04-03 11:07:22,827 - INFO - Completed job: 0b6b0db6-f7d0-407c-b1c2-ced299313b79
+2026-04-03 13:23:37,964 - INFO - Loading faiss with AVX2 support.
+2026-04-03 13:23:38,014 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 13:24:08,777 - INFO - Incoming request: AliPay timeout
+2026-04-03 13:24:08,777 - INFO - Client IP: 127.0.0.1
+2026-04-03 13:24:08,791 - INFO - Processing job: f58556a9-4906-455e-a8e8-bf35d2a5533f
+2026-04-03 13:24:12,645 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 13:24:12,667 - INFO - LLM result received for job: f58556a9-4906-455e-a8e8-bf35d2a5533f
+2026-04-03 13:24:12,682 - INFO - Saved to cache
+2026-04-03 13:24:13,771 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 13:24:16,132 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 13:24:16,155 - INFO - Detected tag: payments
+2026-04-03 13:24:16,167 - INFO - Saved result for job: f58556a9-4906-455e-a8e8-bf35d2a5533f
+2026-04-03 13:24:16,167 - INFO - Completed job: f58556a9-4906-455e-a8e8-bf35d2a5533f
+2026-04-03 13:25:37,536 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 13:26:13,696 - INFO - Incoming request: AliPay timeout
+2026-04-03 13:26:13,696 - INFO - Client IP: 127.0.0.1
+2026-04-03 13:26:13,698 - INFO - Cache hit
+2026-04-03 13:26:35,825 - INFO - Incoming request: AliPay timeout issue
+2026-04-03 13:26:35,826 - INFO - Client IP: 127.0.0.1
+2026-04-03 13:26:35,828 - INFO - Processing job: 8f96b6e0-5e27-476f-b25b-fa348e656b37
+2026-04-03 13:26:36,529 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 13:26:39,080 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 13:26:39,083 - INFO - LLM result received for job: 8f96b6e0-5e27-476f-b25b-fa348e656b37
+2026-04-03 13:26:39,095 - INFO - Saved to cache
+2026-04-03 13:26:40,240 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 13:26:40,531 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 13:26:40,558 - INFO - Detected tag: payments
+2026-04-03 13:26:40,566 - INFO - Saved result for job: 8f96b6e0-5e27-476f-b25b-fa348e656b37
+2026-04-03 13:26:40,566 - INFO - Completed job: 8f96b6e0-5e27-476f-b25b-fa348e656b37

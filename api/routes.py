@@ -5,7 +5,7 @@ from logger import logger
 from cache import get_from_cache
 from fastapi import APIRouter, Request, Header, BackgroundTasks
 from service.worker import process_log_async
-from result_store import save_result, get_result
+from result_store import save_feedback, save_result, get_result
 from rag import save_document
 import uuid
 import time
@@ -73,4 +73,15 @@ def add_document(body: DocumentRequest, x_api_key: str = Header(...)):
     return {
         "status": "success",
         "message": "Document added"
+    }
+
+@router.post("/feedback")
+def add_feedback(job_id: str, feedback: str, x_api_key: str = Header(...)):
+    validate_api_key(x_api_key)
+
+    save_feedback(job_id, feedback)
+
+    return {
+        "status": "success",
+        "message": "Feedback stored"
     }

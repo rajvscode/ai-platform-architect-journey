@@ -23,3 +23,4 @@ class Result(Base):
 
     job_id = Column(String, primary_key=True)
     result = Column(Text)
+    feedback = Column(Text)  # 🔥 NEW

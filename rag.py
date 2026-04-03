@@ -5,7 +5,7 @@ import os
 import numpy as np
 import faiss
 from core.db import SessionLocal
-from core.db_models import LogMemory
+from core.db_models import LogMemory, Result
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
@@ -41,6 +41,19 @@ def load_documents(tag=None):
     db.close()
 
     docs = [row.log for row in rows]
+
+    # 🔥 Add feedback as knowledge
+    feedbacks = []
+
+    db = SessionLocal()
+    results = db.query(Result).filter(Result.feedback != None).all()
+    db.close()
+
+    for r in results:
+        feedbacks.append(r.feedback)
+
+    docs.extend(feedbacks)
+
     embeddings = [json.loads(row.embedding) for row in rows]
 
     return docs, embeddings

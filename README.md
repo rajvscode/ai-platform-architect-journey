@@ -154,3 +154,9 @@ uvicorn main:app --reload
 - Added AI-based log classification
 - Automated tagging process
 - Improved retrieval accuracy
+
+## Day 24 – Feedback Loop
+
+- Added feedback API
+- Enabled system learning
+- Improved future responses using feedback
