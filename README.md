@@ -142,3 +142,9 @@ uvicorn main:app --reload
 - Added API to upload knowledge
 - Enabled dynamic RAG improvement
 - Built platform-like capability
+
+## Day 22 – Tag-Based Retrieval
+
+- Added tagging to documents
+- Enabled filtered RAG search
+- Improved relevance and accuracy

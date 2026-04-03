@@ -6,3 +6,4 @@ class LogRequest(BaseModel):
 
 class DocumentRequest(BaseModel):
     text: str
+    tag: str

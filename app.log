@@ -719,3 +719,55 @@
 2026-04-03 08:55:32,079 - INFO - Saved to memory
 2026-04-03 08:55:32,087 - INFO - Saved result for job: 69d24313-72df-4b33-b1e2-20386c3a7fde
 2026-04-03 08:55:32,087 - INFO - Completed job: 69d24313-72df-4b33-b1e2-20386c3a7fde
+2026-04-03 10:43:50,314 - INFO - Loading faiss with AVX2 support.
+2026-04-03 10:43:50,363 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 10:46:21,632 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 10:47:16,107 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 10:47:44,775 - INFO - Incoming request: Ali-pay timeout
+2026-04-03 10:47:44,775 - INFO - Client IP: 127.0.0.1
+2026-04-03 10:47:44,785 - INFO - Processing job: f6af6795-947c-4591-887a-e6a951a979a8
+2026-04-03 10:47:45,305 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 10:47:47,751 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 10:47:47,769 - INFO - LLM result received for job: f6af6795-947c-4591-887a-e6a951a979a8
+2026-04-03 10:47:47,782 - INFO - Saved to cache
+2026-04-03 10:47:47,782 - ERROR - \u274c Background job failed: f6af6795-947c-4591-887a-e6a951a979a8, Error: save_document() missing 1 required positional argument: 'tag'
+2026-04-03 10:53:03,947 - INFO - Loading faiss with AVX2 support.
+2026-04-03 10:53:03,958 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 10:53:39,416 - INFO - Incoming request: AliPay timeout
+2026-04-03 10:53:39,417 - INFO - Client IP: 127.0.0.1
+2026-04-03 10:53:39,432 - INFO - Processing job: 5a3e053c-05e7-4234-b0cc-a67b01b65eee
+2026-04-03 10:53:40,529 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 10:53:42,977 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 10:53:42,984 - INFO - LLM result received for job: 5a3e053c-05e7-4234-b0cc-a67b01b65eee
+2026-04-03 10:53:42,993 - INFO - Saved to cache
+2026-04-03 10:53:43,181 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 10:53:43,196 - INFO - Saved to memory
+2026-04-03 10:53:43,202 - INFO - Saved result for job: 5a3e053c-05e7-4234-b0cc-a67b01b65eee
+2026-04-03 10:53:43,202 - INFO - Completed job: 5a3e053c-05e7-4234-b0cc-a67b01b65eee
+2026-04-03 10:54:30,534 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 10:54:40,352 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 10:55:04,540 - INFO - Incoming request: AliPay timeout
+2026-04-03 10:55:04,541 - INFO - Client IP: 127.0.0.1
+2026-04-03 10:55:04,542 - INFO - Cache hit
+2026-04-03 10:55:25,312 - INFO - Incoming request: AliPay timeout issue
+2026-04-03 10:55:25,312 - INFO - Client IP: 127.0.0.1
+2026-04-03 10:55:25,314 - INFO - Processing job: 2bd9d511-4334-429f-bfcf-be273e1580b6
+2026-04-03 10:55:26,647 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 10:55:29,484 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 10:55:29,489 - INFO - LLM result received for job: 2bd9d511-4334-429f-bfcf-be273e1580b6
+2026-04-03 10:55:29,496 - INFO - Saved to cache
+2026-04-03 10:55:29,882 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 10:55:29,905 - INFO - Saved to memory
+2026-04-03 10:55:29,908 - INFO - Saved result for job: 2bd9d511-4334-429f-bfcf-be273e1580b6
+2026-04-03 10:55:29,909 - INFO - Completed job: 2bd9d511-4334-429f-bfcf-be273e1580b6
+2026-04-03 10:57:26,167 - INFO - Incoming request: Ali-Pay timeout issue
+2026-04-03 10:57:26,167 - INFO - Client IP: 127.0.0.1
+2026-04-03 10:57:26,170 - INFO - Processing job: 1a38a09e-21f1-4c6c-9fd5-b375600fe742
+2026-04-03 10:57:26,926 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 10:57:28,802 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 10:57:28,803 - INFO - LLM result received for job: 1a38a09e-21f1-4c6c-9fd5-b375600fe742
+2026-04-03 10:57:28,810 - INFO - Saved to cache
+2026-04-03 10:57:29,014 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 10:57:29,043 - INFO - Saved to memory
+2026-04-03 10:57:29,053 - INFO - Saved result for job: 1a38a09e-21f1-4c6c-9fd5-b375600fe742
+2026-04-03 10:57:29,053 - INFO - Completed job: 1a38a09e-21f1-4c6c-9fd5-b375600fe742

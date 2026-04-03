@@ -7,7 +7,8 @@ class LogMemory(Base):
 
     id = Column(String, primary_key=True)
     log = Column(Text)
-    embedding = Column(Text)  # 🔥 NEW FIELD
+    embedding = Column(Text)
+    tag = Column(String)  # 🔥 NEW FIELD
 
 
 class Cache(Base):

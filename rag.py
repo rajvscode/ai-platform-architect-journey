@@ -12,7 +12,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 index = None
 documents = []
 
-def save_document(new_doc):
+def save_document(new_doc, tag):
     db = SessionLocal()
 
     embedding = get_embedding(new_doc)
@@ -20,19 +20,24 @@ def save_document(new_doc):
     db_log = LogMemory(
         id=str(uuid.uuid4()),
         log=new_doc,
-        embedding=json.dumps(embedding)
+        embedding=json.dumps(embedding),
+        tag=tag
     )
 
     db.add(db_log)
     db.commit()
     db.close()
 
-    # 🔥 Refresh index
     initialize_index()
 
-def load_documents():
+def load_documents(tag=None):
     db = SessionLocal()
-    rows = db.query(LogMemory).all()
+
+    if tag:
+        rows = db.query(LogMemory).filter(LogMemory.tag == tag).all()
+    else:
+        rows = db.query(LogMemory).all()
+
     db.close()
 
     docs = [row.log for row in rows]
@@ -71,14 +76,20 @@ def initialize_index():
         index = None
         documents = []
 
-def search_similar(query, threshold=0.7, k=5):
-    global index, documents
+def search_similar(query, tag=None, threshold=0.5, k=5):
+    docs, embeddings = load_documents(tag)
 
-    if index is None or not documents:
+    if not docs:
         return []
 
+    vectors = np.array(embeddings).astype("float32")
+
+    index = faiss.IndexFlatL2(len(vectors[0]))
+    index.add(vectors)
+
     query_vector = np.array([get_embedding(query)]).astype("float32")
-    distances, indices = index.search(query_vector, k=min(k, len(documents)))
+
+    distances, indices = index.search(query_vector, k=min(k, len(docs)))
 
     results = []
 
@@ -86,6 +97,6 @@ def search_similar(query, threshold=0.7, k=5):
         similarity = 1 / (1 + dist)
 
         if similarity >= threshold:
-            results.append(documents[idx])
+            results.append(docs[idx])
 
     return results

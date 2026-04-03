@@ -17,7 +17,7 @@ def process_log_async(log, context, job_id):
         save_to_cache(log, result)
         logger.info("Saved to cache")
 
-        save_document(log)
+        save_document(log, tag="payments")
         logger.info("Saved to memory")
 
         save_result(job_id, result)

@@ -68,9 +68,9 @@ def fetch_result(job_id: str):
 def add_document(body: DocumentRequest, x_api_key: str = Header(...)):
     validate_api_key(x_api_key)
 
-    save_document(body.text)
+    save_document(body.text, body.tag)
 
     return {
         "status": "success",
-        "message": "Document added to knowledge base"
+        "message": "Document added"
     }
