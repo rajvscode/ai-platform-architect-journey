@@ -633,3 +633,30 @@
 2026-04-02 12:40:41,277 - INFO - Saved to memory
 2026-04-02 12:40:41,285 - INFO - Saved result for job: 15c0234e-56e8-420b-a112-61b3de5fff3d
 2026-04-02 12:40:41,286 - INFO - Completed job: 15c0234e-56e8-420b-a112-61b3de5fff3d
+2026-04-03 08:25:59,770 - INFO - Loading faiss with AVX2 support.
+2026-04-03 08:25:59,818 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 08:26:47,108 - INFO - Incoming request: payment amazon-pay timeout
+2026-04-03 08:26:47,108 - INFO - Client IP: 127.0.0.1
+2026-04-03 08:26:47,132 - INFO - Processing job: 5b5b0951-477d-45ab-929f-f8dbb42662c1
+2026-04-03 08:26:52,092 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 08:26:52,104 - INFO - LLM result received for job: 5b5b0951-477d-45ab-929f-f8dbb42662c1
+2026-04-03 08:26:52,112 - INFO - Saved to cache
+2026-04-03 08:26:54,805 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 08:26:54,813 - ERROR - \u274c Background job failed: 5b5b0951-477d-45ab-929f-f8dbb42662c1, Error: name 'json' is not defined
+2026-04-03 08:31:24,384 - INFO - Loading faiss with AVX2 support.
+2026-04-03 08:31:24,395 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 08:31:38,862 - INFO - Loading faiss with AVX2 support.
+2026-04-03 08:31:38,873 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 08:32:03,284 - INFO - Incoming request: payment amazon-pay timeout
+2026-04-03 08:32:03,285 - INFO - Client IP: 127.0.0.1
+2026-04-03 08:32:03,291 - INFO - Cache hit
+2026-04-03 08:32:36,749 - INFO - Incoming request: payment amazon-pay timeout issues
+2026-04-03 08:32:36,749 - INFO - Client IP: 127.0.0.1
+2026-04-03 08:32:36,762 - INFO - Processing job: 98fe3f99-a9e7-4cd1-a59e-4fdf6c65d131
+2026-04-03 08:32:41,126 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 08:32:41,135 - INFO - LLM result received for job: 98fe3f99-a9e7-4cd1-a59e-4fdf6c65d131
+2026-04-03 08:32:41,144 - INFO - Saved to cache
+2026-04-03 08:32:43,834 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 08:32:43,853 - INFO - Saved to memory
+2026-04-03 08:32:43,863 - INFO - Saved result for job: 98fe3f99-a9e7-4cd1-a59e-4fdf6c65d131
+2026-04-03 08:32:43,863 - INFO - Completed job: 98fe3f99-a9e7-4cd1-a59e-4fdf6c65d131

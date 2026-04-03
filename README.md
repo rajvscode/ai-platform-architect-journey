@@ -130,3 +130,9 @@ uvicorn main:app --reload
 - Implemented batch embeddings
 - Reduced API calls
 - Improved performance and cost efficiency
+
+## Day 20 – Embedding Persistence
+
+- Stored embeddings in database
+- Avoided recomputation
+- Improved performance and cost
