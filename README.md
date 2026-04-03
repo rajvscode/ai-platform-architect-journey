@@ -178,3 +178,9 @@ uvicorn main:app --reload
 - Added time-based metrics
 - Built charts using Chart.js
 - Visualized system performance
+
+## Day 28 – Live Dashboard
+
+- Added auto-refresh functionality
+- Implemented real-time metric updates
+- Improved observability experience

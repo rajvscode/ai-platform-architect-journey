@@ -134,16 +134,17 @@ def dashboard(x_api_key: str = Header(None)):
     <html>
     <head>
         <title>AI Dashboard</title>
+        <meta http-equiv="refresh" content="5">
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body>
 
         <h1>🚀 AI System Dashboard</h1>
 
-        <p>Total Requests: {data["total_requests"]}</p>
-        <p>Success: {data["success"]}</p>
-        <p>Failure: {data["failure"]}</p>
-        <p>Avg Latency: {data["average_latency"]} sec</p>
+        <p>Total Requests: <span id="total"></span></p>
+        <p>Success: <span id="success"></span></p>
+        <p>Failure: <span id="failure"></span></p>
+        <p>Avg Latency: <span id="latency"></span></p>
 
         <h2>📈 Requests Over Time</h2>
         <canvas id="requestsChart"></canvas>
@@ -152,34 +153,38 @@ def dashboard(x_api_key: str = Header(None)):
         <canvas id="latencyChart"></canvas>
 
         <script>
-            const requestData = {data["requests_timeline"]};
-            const latencyData = {data["latencies"]};
+            async function loadMetrics() {{
+                const res = await fetch('/metrics');
+                const data = await res.json();
 
-            const labels = requestData.map((_, i) => i + 1);
+                document.getElementById('total').innerText = data.total_requests;
+                document.getElementById('success').innerText = data.success;
+                document.getElementById('failure').innerText = data.failure;
+                document.getElementById('latency').innerText = data.average_latency;
 
-            new Chart(document.getElementById('requestsChart'), {{
+                const labels = data.requests_timeline.map((_, i) => i + 1);
+
+                requestsChart.data.labels = labels;
+                requestsChart.data.datasets[0].data = labels;
+                requestsChart.update();
+
+                latencyChart.data.labels = labels;
+                latencyChart.data.datasets[0].data = data.latencies;
+                latencyChart.update();
+            }}
+
+            const requestsChart = new Chart(document.getElementById('requestsChart'), {{
                 type: 'line',
-                data: {{
-                    labels: labels,
-                    datasets: [{{
-                        label: 'Requests',
-                        data: labels,
-                        borderColor: 'blue'
-                    }}]
-                }}
+                data: {{ labels: [], datasets: [{{ label: 'Requests', data: [] }}] }}
             }});
 
-            new Chart(document.getElementById('latencyChart'), {{
+            const latencyChart = new Chart(document.getElementById('latencyChart'), {{
                 type: 'line',
-                data: {{
-                    labels: labels,
-                    datasets: [{{
-                        label: 'Latency',
-                        data: latencyData,
-                        borderColor: 'green'
-                    }}]
-                }}
+                data: {{ labels: [], datasets: [{{ label: 'Latency', data: [] }}] }}
             }});
+
+            setInterval(loadMetrics, 5000);
+            loadMetrics();
         </script>
 
     </body>
