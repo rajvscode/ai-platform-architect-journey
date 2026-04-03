@@ -923,3 +923,51 @@
 2026-04-03 16:21:46,151 - INFO - Successfully loaded faiss with AVX2 support.
 2026-04-03 16:21:48,205 - INFO - Loading faiss with AVX2 support.
 2026-04-03 16:21:48,217 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:32:00,474 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:32:00,484 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:32:30,540 - INFO - Incoming request: AliPay timeout
+2026-04-03 16:32:30,540 - INFO - Client IP: 127.0.0.1
+2026-04-03 16:32:30,548 - INFO - Cache hit
+2026-04-03 16:32:38,536 - INFO - Incoming request: AliPay timeout reason
+2026-04-03 16:32:38,536 - INFO - Client IP: 127.0.0.1
+2026-04-03 16:32:38,539 - INFO - Processing job: b1537aa4-0e81-4fed-9273-7c6291e8c111
+2026-04-03 16:32:39,996 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 16:32:41,840 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:32:41,855 - INFO - LLM result received for job: b1537aa4-0e81-4fed-9273-7c6291e8c111
+2026-04-03 16:32:41,872 - INFO - Saved to cache
+2026-04-03 16:32:43,515 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:32:43,637 - INFO - Incoming request: AliPay timeout issue
+2026-04-03 16:32:43,637 - INFO - Client IP: 127.0.0.1
+2026-04-03 16:32:43,638 - INFO - Cache hit
+2026-04-03 16:32:44,401 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 16:32:44,416 - INFO - Saved to memory with tag: payments
+2026-04-03 16:32:44,422 - INFO - Saved result for job: b1537aa4-0e81-4fed-9273-7c6291e8c111
+2026-04-03 16:32:44,422 - INFO - Completed job: b1537aa4-0e81-4fed-9273-7c6291e8c111
+2026-04-03 16:33:00,448 - INFO - Incoming request: AliPay timeout issue happening frequently
+2026-04-03 16:33:00,448 - INFO - Client IP: 127.0.0.1
+2026-04-03 16:33:00,452 - INFO - Processing job: 2a4bc4e8-0686-4f45-9920-54012722ea8b
+2026-04-03 16:33:01,003 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 16:33:03,551 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:33:03,552 - INFO - LLM result received for job: 2a4bc4e8-0686-4f45-9920-54012722ea8b
+2026-04-03 16:33:03,562 - INFO - Saved to cache
+2026-04-03 16:33:04,681 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:33:05,017 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 16:33:05,034 - INFO - Saved to memory with tag: payments
+2026-04-03 16:33:05,041 - INFO - Saved result for job: 2a4bc4e8-0686-4f45-9920-54012722ea8b
+2026-04-03 16:33:05,041 - INFO - Completed job: 2a4bc4e8-0686-4f45-9920-54012722ea8b
+2026-04-03 16:33:46,172 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 16:34:20,000 - INFO - Incoming request: AliPay timeout issue happening frequently
+2026-04-03 16:34:20,000 - INFO - Client IP: 127.0.0.1
+2026-04-03 16:34:20,001 - INFO - Cache hit
+2026-04-03 16:34:30,513 - INFO - Incoming request: AliPay timeout issue happening frequenttly
+2026-04-03 16:34:30,513 - INFO - Client IP: 127.0.0.1
+2026-04-03 16:34:30,514 - INFO - Processing job: f9b7c938-8739-4377-8db1-db83ba12a567
+2026-04-03 16:34:31,100 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 16:34:33,253 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:34:33,254 - INFO - LLM result received for job: f9b7c938-8739-4377-8db1-db83ba12a567
+2026-04-03 16:34:33,268 - INFO - Saved to cache
+2026-04-03 16:34:34,070 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:34:34,275 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 16:34:34,291 - INFO - Saved to memory with tag: payments
+2026-04-03 16:34:34,296 - INFO - Saved result for job: f9b7c938-8739-4377-8db1-db83ba12a567
+2026-04-03 16:34:34,296 - INFO - Completed job: f9b7c938-8739-4377-8db1-db83ba12a567

@@ -172,3 +172,9 @@ uvicorn main:app --reload
 - Added visual dashboard for metrics
 - Displayed system health
 - Improved observability
+
+## Day 27 – Charts & Monitoring
+
+- Added time-based metrics
+- Built charts using Chart.js
+- Visualized system performance

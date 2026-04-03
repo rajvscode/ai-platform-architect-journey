@@ -130,37 +130,57 @@ def dashboard(x_api_key: str = Header(None)):
 
     data = get_metrics()
 
-    success_rate = 0
-    if data["total_requests"] > 0:
-        success_rate = (data["successful_responses"] / data["total_requests"]) * 100
-
     html = f"""
     <html>
     <head>
-        <title>AI Platform Dashboard</title>
-        <style>
-            body {{
-                font-family: Arial;
-                background: #f4f4f4;
-                padding: 20px;
-            }}
-            h1 {{
-                color: #333;
-            }}
-            p {{
-                font-size: 18px;
-            }}
-        </style>
+        <title>AI Dashboard</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     </head>
     <body>
-        <h1>🚀 AI System Metrics</h1>
 
-        <p><b>Total Requests:</b> {data["total_requests"]}</p>
-        <p><b>Successful:</b> {data["successful_responses"]}</p>
-        <p><b>Failed:</b> {data["failed_requests"]}</p>
-        <p><b>Feedback Count:</b> {data["feedback_count"]}</p>
-        <p><b>Average Latency:</b> {data["average_latency"]} sec</p>
-        <p><b>Success Rate:</b> {round(success_rate, 2)}%</p>
+        <h1>🚀 AI System Dashboard</h1>
+
+        <p>Total Requests: {data["total_requests"]}</p>
+        <p>Success: {data["success"]}</p>
+        <p>Failure: {data["failure"]}</p>
+        <p>Avg Latency: {data["average_latency"]} sec</p>
+
+        <h2>📈 Requests Over Time</h2>
+        <canvas id="requestsChart"></canvas>
+
+        <h2>⚡ Latency Trend</h2>
+        <canvas id="latencyChart"></canvas>
+
+        <script>
+            const requestData = {data["requests_timeline"]};
+            const latencyData = {data["latencies"]};
+
+            const labels = requestData.map((_, i) => i + 1);
+
+            new Chart(document.getElementById('requestsChart'), {{
+                type: 'line',
+                data: {{
+                    labels: labels,
+                    datasets: [{{
+                        label: 'Requests',
+                        data: labels,
+                        borderColor: 'blue'
+                    }}]
+                }}
+            }});
+
+            new Chart(document.getElementById('latencyChart'), {{
+                type: 'line',
+                data: {{
+                    labels: labels,
+                    datasets: [{{
+                        label: 'Latency',
+                        data: latencyData,
+                        borderColor: 'green'
+                    }}]
+                }}
+            }});
+        </script>
 
     </body>
     </html>

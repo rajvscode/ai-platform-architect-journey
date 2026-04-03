@@ -1,38 +1,47 @@
 metrics = {
-    "total_requests": 0,
-    "successful_responses": 0,
-    "failed_requests": 0,
-    "feedback_count": 0,
-    "total_latency": 0
+    "requests": [],
+    "latencies": [],
+    "success": 0,
+    "failure": 0,
+    "feedback": 0
 }
 
 
+import time
+
 def record_request():
-    metrics["total_requests"] += 1
-
-
-def record_success():
-    metrics["successful_responses"] += 1
-
-
-def record_failure():
-    metrics["failed_requests"] += 1
-
-
-def record_feedback():
-    metrics["feedback_count"] += 1
+    metrics["requests"].append(time.time())
 
 
 def record_latency(latency):
-    metrics["total_latency"] += latency
+    metrics["latencies"].append(latency)
+
+
+def record_success():
+    metrics["success"] += 1
+
+
+def record_failure():
+    metrics["failure"] += 1
+
+
+def record_feedback():
+    metrics["feedback"] += 1
 
 
 def get_metrics():
+    total_requests = len(metrics["requests"])
+
     avg_latency = 0
-    if metrics["total_requests"] > 0:
-        avg_latency = metrics["total_latency"] / metrics["total_requests"]
+    if metrics["latencies"]:
+        avg_latency = sum(metrics["latencies"]) / len(metrics["latencies"])
 
     return {
-        **metrics,
-        "average_latency": round(avg_latency, 2)
+        "total_requests": total_requests,
+        "success": metrics["success"],
+        "failure": metrics["failure"],
+        "feedback": metrics["feedback"],
+        "average_latency": round(avg_latency, 2),
+        "requests_timeline": metrics["requests"],
+        "latencies": metrics["latencies"]
     }
