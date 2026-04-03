@@ -1,3 +1,4 @@
+from alerting import check_alerts
 from core.limiter import limiter
 from core.models import LogRequest, DocumentRequest
 from core.security import validate_api_key
@@ -31,6 +32,8 @@ async def analyze(
 
     start_time = time.time()
     record_request()
+
+    check_alerts()
 
     logger.info(f"Incoming request: {body.log}")
     logger.info(f"Client IP: {request.client.host}")

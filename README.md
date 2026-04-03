@@ -184,3 +184,9 @@ uvicorn main:app --reload
 - Added auto-refresh functionality
 - Implemented real-time metric updates
 - Improved observability experience
+
+## Day 29 – Alerting System
+
+- Added failure rate alerts
+- Added latency alerts
+- Enabled proactive monitoring

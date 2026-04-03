@@ -1035,3 +1035,95 @@
 2026-04-03 16:48:51,082 - INFO - Saved to memory with tag: payments
 2026-04-03 16:48:51,093 - INFO - Saved result for job: 929e9a1c-ee66-40ec-9fbe-aa18283d537d
 2026-04-03 16:48:51,093 - INFO - Completed job: 929e9a1c-ee66-40ec-9fbe-aa18283d537d
+2026-04-03 17:11:42,546 - INFO - Loading faiss with AVX2 support.
+2026-04-03 17:11:42,558 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 17:12:04,912 - INFO - Incoming request: AliPay timeout
+2026-04-03 17:12:04,913 - INFO - Client IP: 127.0.0.1
+2026-04-03 17:12:04,918 - INFO - Cache hit
+2026-04-03 17:12:11,596 - INFO - Incoming request: AliPay timeout
+2026-04-03 17:12:11,596 - INFO - Client IP: 127.0.0.1
+2026-04-03 17:12:11,598 - INFO - Cache hit
+2026-04-03 17:12:12,385 - INFO - Incoming request: AliPay timeout
+2026-04-03 17:12:12,385 - INFO - Client IP: 127.0.0.1
+2026-04-03 17:12:12,386 - INFO - Cache hit
+2026-04-03 17:12:20,425 - INFO - Incoming request: AliPay timeout
+2026-04-03 17:12:20,425 - INFO - Client IP: 127.0.0.1
+2026-04-03 17:12:20,427 - INFO - Cache hit
+2026-04-03 17:12:20,670 - INFO - Incoming request: AliPay timeout
+2026-04-03 17:12:20,670 - INFO - Client IP: 127.0.0.1
+2026-04-03 17:12:20,671 - INFO - Cache hit
+2026-04-03 17:12:20,828 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:20,986 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:21,136 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:21,308 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:21,469 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:21,631 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:21,798 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:21,951 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:22,116 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:22,289 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:22,462 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:22,616 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:22,788 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:22,942 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:23,115 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:23,332 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:23,657 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:23,830 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:23,998 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:24,174 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:24,497 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:24,668 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:24,821 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:24,991 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:25,164 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:12:25,331 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:16:13,499 - INFO - Loading faiss with AVX2 support.
+2026-04-03 17:16:13,513 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 17:17:25,370 - INFO - Incoming request: AliPay timeout fail
+2026-04-03 17:17:25,370 - INFO - Client IP: 127.0.0.1
+2026-04-03 17:17:25,376 - INFO - Processing job: 5b942b9c-6adf-42d5-939c-d8abb0b4fd82
+2026-04-03 17:17:25,376 - ERROR - \u274c Background job failed: 5b942b9c-6adf-42d5-939c-d8abb0b4fd82, Error: Simulated failure
+2026-04-03 17:17:40,606 - ERROR - \U0001f6a8 ALERT: High failure rate! (50.0%)
+2026-04-03 17:17:40,607 - INFO - Incoming request: AliPay timeout
+2026-04-03 17:17:40,607 - INFO - Client IP: 127.0.0.1
+2026-04-03 17:17:40,609 - INFO - Cache hit
+2026-04-03 17:18:27,030 - ERROR - \U0001f6a8 ALERT: High failure rate! (33.33%)
+2026-04-03 17:18:27,030 - INFO - Incoming request: 
+2026-04-03 17:18:27,030 - INFO - Client IP: 127.0.0.1
+2026-04-03 17:18:27,033 - INFO - Processing job: 7fe76606-af9a-4f27-8f23-f979a9e30b3a
+2026-04-03 17:18:27,033 - ERROR - \U0001f6a8 ALERT: High failure rate! (33.33%)
+2026-04-03 17:18:28,560 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 17:18:31,084 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:18:31,097 - INFO - LLM result received for job: 7fe76606-af9a-4f27-8f23-f979a9e30b3a
+2026-04-03 17:18:31,107 - INFO - Saved to cache
+2026-04-03 17:18:32,415 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 17:18:33,335 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 17:18:33,352 - INFO - Saved to memory with tag: general
+2026-04-03 17:18:33,359 - INFO - Saved result for job: 7fe76606-af9a-4f27-8f23-f979a9e30b3a
+2026-04-03 17:18:33,360 - INFO - Completed job: 7fe76606-af9a-4f27-8f23-f979a9e30b3a
+2026-04-03 17:19:09,428 - INFO - Incoming request: AliPay timeout fail
+2026-04-03 17:19:09,428 - INFO - Client IP: 127.0.0.1
+2026-04-03 17:19:09,431 - INFO - Processing job: 5d2c6216-9377-4485-b809-01442257c7f5
+2026-04-03 17:19:09,431 - ERROR - \u274c Background job failed: 5d2c6216-9377-4485-b809-01442257c7f5, Error: Simulated failure
+2026-04-03 17:19:10,417 - ERROR - \U0001f6a8 ALERT: High failure rate! (40.0%)
+2026-04-03 17:19:10,417 - INFO - Incoming request: AliPay timeout fail
+2026-04-03 17:19:10,417 - INFO - Client IP: 127.0.0.1
+2026-04-03 17:19:10,420 - INFO - Processing job: b1be2fc1-06c2-465b-b07b-15db454e4a47
+2026-04-03 17:19:10,420 - ERROR - \u274c Background job failed: b1be2fc1-06c2-465b-b07b-15db454e4a47, Error: Simulated failure
+2026-04-03 17:19:10,590 - ERROR - \U0001f6a8 ALERT: High failure rate! (50.0%)
+2026-04-03 17:19:10,591 - INFO - Incoming request: AliPay timeout fail
+2026-04-03 17:19:10,591 - INFO - Client IP: 127.0.0.1
+2026-04-03 17:19:10,594 - INFO - Processing job: 7c86ea9c-b42b-4fa0-9961-0cac74828eed
+2026-04-03 17:19:10,594 - ERROR - \u274c Background job failed: 7c86ea9c-b42b-4fa0-9961-0cac74828eed, Error: Simulated failure
+2026-04-03 17:19:10,767 - ERROR - \U0001f6a8 ALERT: High failure rate! (57.14%)
+2026-04-03 17:19:10,767 - INFO - Incoming request: AliPay timeout fail
+2026-04-03 17:19:10,767 - INFO - Client IP: 127.0.0.1
+2026-04-03 17:19:10,771 - INFO - Processing job: 6ad88cab-9608-44c2-bae9-31b8f6db265c
+2026-04-03 17:19:10,771 - ERROR - \u274c Background job failed: 6ad88cab-9608-44c2-bae9-31b8f6db265c, Error: Simulated failure
+2026-04-03 17:19:11,353 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:19:22,520 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:19:22,730 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:19:22,909 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:19:23,082 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
+2026-04-03 17:19:23,249 - WARNING - ratelimit 5 per 1 minute (127.0.0.1) exceeded at endpoint: /analyze-log
