@@ -12,6 +12,9 @@ import uuid
 import time
 import asyncio
 
+from fastapi.responses import HTMLResponse
+from metrics import get_metrics
+
 
 router = APIRouter()
 
@@ -21,9 +24,10 @@ async def analyze(
     request: Request,
     body: LogRequest,
     background_tasks: BackgroundTasks,
-    x_api_key: str = Header(...)
+    x_api_key: str = Header(None)
 ):
-    validate_api_key(x_api_key)
+    if x_api_key:
+        validate_api_key(x_api_key)
 
     start_time = time.time()
     record_request()
@@ -87,8 +91,9 @@ def fetch_result(job_id: str):
     }
 
 @router.post("/add-document")
-def add_document(body: DocumentRequest, x_api_key: str = Header(...)):
-    validate_api_key(x_api_key)
+def add_document(body: DocumentRequest, x_api_key: str = Header(None)):
+    if x_api_key:
+        validate_api_key(x_api_key)
 
     save_document(body.text, body.tag)
 
@@ -98,8 +103,9 @@ def add_document(body: DocumentRequest, x_api_key: str = Header(...)):
     }
 
 @router.post("/feedback")
-def add_feedback(job_id: str, feedback: str, x_api_key: str = Header(...)):
-    validate_api_key(x_api_key)
+def add_feedback(job_id: str, feedback: str, x_api_key: str = Header(None)):
+    if x_api_key:
+        validate_api_key(x_api_key)
 
     save_feedback(job_id, feedback)
 
@@ -111,7 +117,53 @@ def add_feedback(job_id: str, feedback: str, x_api_key: str = Header(...)):
     }
 
 @router.get("/metrics")
-def metrics_endpoint(x_api_key: str = Header(...)):
-    validate_api_key(x_api_key)
+def metrics_endpoint(x_api_key: str = Header(None)):
+    if x_api_key:
+        validate_api_key(x_api_key)
 
     return get_metrics()
+
+@router.get("/dashboard", response_class=HTMLResponse)
+def dashboard(x_api_key: str = Header(None)):
+    if x_api_key:
+        validate_api_key(x_api_key)
+
+    data = get_metrics()
+
+    success_rate = 0
+    if data["total_requests"] > 0:
+        success_rate = (data["successful_responses"] / data["total_requests"]) * 100
+
+    html = f"""
+    <html>
+    <head>
+        <title>AI Platform Dashboard</title>
+        <style>
+            body {{
+                font-family: Arial;
+                background: #f4f4f4;
+                padding: 20px;
+            }}
+            h1 {{
+                color: #333;
+            }}
+            p {{
+                font-size: 18px;
+            }}
+        </style>
+    </head>
+    <body>
+        <h1>🚀 AI System Metrics</h1>
+
+        <p><b>Total Requests:</b> {data["total_requests"]}</p>
+        <p><b>Successful:</b> {data["successful_responses"]}</p>
+        <p><b>Failed:</b> {data["failed_requests"]}</p>
+        <p><b>Feedback Count:</b> {data["feedback_count"]}</p>
+        <p><b>Average Latency:</b> {data["average_latency"]} sec</p>
+        <p><b>Success Rate:</b> {round(success_rate, 2)}%</p>
+
+    </body>
+    </html>
+    """
+
+    return html

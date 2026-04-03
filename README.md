@@ -166,3 +166,9 @@ uvicorn main:app --reload
 - Added request tracking
 - Measured latency and success rate
 - Introduced AI evaluation metrics
+
+## Day 26 – Dashboard
+
+- Added visual dashboard for metrics
+- Displayed system health
+- Improved observability

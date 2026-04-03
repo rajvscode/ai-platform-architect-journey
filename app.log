@@ -837,3 +837,89 @@
 2026-04-03 15:56:55,954 - INFO - Saved to memory with tag: payments
 2026-04-03 15:56:55,960 - INFO - Saved result for job: cadd5bae-38c5-455d-9fcf-00ff3fc96840
 2026-04-03 15:56:55,960 - INFO - Completed job: cadd5bae-38c5-455d-9fcf-00ff3fc96840
+2026-04-03 16:09:15,812 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:09:15,824 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:10:48,697 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:10:48,709 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:10:52,468 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:10:52,479 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:10:54,684 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:10:54,694 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:11:02,184 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:11:02,194 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:14:21,771 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:14:21,783 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:14:25,268 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:14:25,281 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:14:29,317 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:14:29,329 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:14:49,265 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:14:49,277 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:15:28,240 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:15:28,254 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:15:36,055 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:15:36,068 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:15:39,924 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:15:39,935 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:15:49,636 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:15:49,649 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:15:55,152 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:15:55,164 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:16:08,970 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:16:08,982 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:16:12,880 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:16:12,890 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:16:24,002 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:16:24,013 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:16:57,175 - INFO - Incoming request: AliPay timeout issues1
+2026-04-03 16:16:57,175 - INFO - Client IP: 127.0.0.1
+2026-04-03 16:16:57,188 - INFO - Processing job: 4dc4b86f-5343-4360-91ea-59b49073f3e9
+2026-04-03 16:16:58,670 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 16:17:00,726 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:17:00,738 - INFO - LLM result received for job: 4dc4b86f-5343-4360-91ea-59b49073f3e9
+2026-04-03 16:17:00,749 - INFO - Saved to cache
+2026-04-03 16:17:01,600 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:17:02,270 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 16:17:02,289 - INFO - Saved to memory with tag: payments
+2026-04-03 16:17:02,299 - INFO - Saved result for job: 4dc4b86f-5343-4360-91ea-59b49073f3e9
+2026-04-03 16:17:02,299 - INFO - Completed job: 4dc4b86f-5343-4360-91ea-59b49073f3e9
+2026-04-03 16:17:56,486 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 16:18:11,132 - INFO - Incoming request: AliPay timeout issues1
+2026-04-03 16:18:11,132 - INFO - Client IP: 127.0.0.1
+2026-04-03 16:18:11,133 - INFO - Cache hit
+2026-04-03 16:18:31,093 - INFO - Incoming request: chumma dummy test
+2026-04-03 16:18:31,093 - INFO - Client IP: 127.0.0.1
+2026-04-03 16:18:31,096 - INFO - Processing job: e7036a01-8214-41b6-b74b-8e1753212b5d
+2026-04-03 16:18:31,520 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 16:18:33,667 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:18:33,670 - INFO - LLM result received for job: e7036a01-8214-41b6-b74b-8e1753212b5d
+2026-04-03 16:18:33,676 - INFO - Saved to cache
+2026-04-03 16:18:35,248 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:18:35,615 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 16:18:35,631 - INFO - Saved to memory with tag: general
+2026-04-03 16:18:35,636 - INFO - Saved result for job: e7036a01-8214-41b6-b74b-8e1753212b5d
+2026-04-03 16:18:35,636 - INFO - Completed job: e7036a01-8214-41b6-b74b-8e1753212b5d
+2026-04-03 16:19:05,514 - INFO - Incoming request: just dummy test
+2026-04-03 16:19:05,515 - INFO - Client IP: 127.0.0.1
+2026-04-03 16:19:05,517 - INFO - Processing job: 65a2d45b-152e-492c-9495-f54f2acc18a1
+2026-04-03 16:19:06,030 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 16:19:08,166 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:19:08,167 - INFO - LLM result received for job: 65a2d45b-152e-492c-9495-f54f2acc18a1
+2026-04-03 16:19:08,173 - INFO - Saved to cache
+2026-04-03 16:19:08,790 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 16:19:09,108 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 16:19:09,120 - INFO - Saved to memory with tag: general
+2026-04-03 16:19:09,124 - INFO - Saved result for job: 65a2d45b-152e-492c-9495-f54f2acc18a1
+2026-04-03 16:19:09,124 - INFO - Completed job: 65a2d45b-152e-492c-9495-f54f2acc18a1
+2026-04-03 16:20:44,998 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:20:45,009 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:21:36,410 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:21:36,421 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:21:39,973 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:21:39,985 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:21:42,321 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:21:42,332 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:21:46,141 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:21:46,151 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 16:21:48,205 - INFO - Loading faiss with AVX2 support.
+2026-04-03 16:21:48,217 - INFO - Successfully loaded faiss with AVX2 support.
