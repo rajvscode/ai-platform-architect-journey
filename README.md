@@ -136,3 +136,9 @@ uvicorn main:app --reload
 - Stored embeddings in database
 - Avoided recomputation
 - Improved performance and cost
+
+## Day 21 – Document Ingestion
+
+- Added API to upload knowledge
+- Enabled dynamic RAG improvement
+- Built platform-like capability

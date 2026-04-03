@@ -660,3 +660,62 @@
 2026-04-03 08:32:43,853 - INFO - Saved to memory
 2026-04-03 08:32:43,863 - INFO - Saved result for job: 98fe3f99-a9e7-4cd1-a59e-4fdf6c65d131
 2026-04-03 08:32:43,863 - INFO - Completed job: 98fe3f99-a9e7-4cd1-a59e-4fdf6c65d131
+2026-04-03 08:41:36,030 - INFO - Loading faiss with AVX2 support.
+2026-04-03 08:41:36,042 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 08:42:13,172 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 08:42:38,753 - INFO - Incoming request: Amazon Pay timeout
+2026-04-03 08:42:38,753 - INFO - Client IP: 127.0.0.1
+2026-04-03 08:42:38,759 - INFO - Processing job: 48287b91-3a8e-41a8-a763-50854f5b2b57
+2026-04-03 08:42:39,346 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 08:42:42,930 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 08:42:42,938 - INFO - LLM result received for job: 48287b91-3a8e-41a8-a763-50854f5b2b57
+2026-04-03 08:42:42,945 - INFO - Saved to cache
+2026-04-03 08:42:43,146 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 08:42:43,158 - INFO - Saved to memory
+2026-04-03 08:42:43,166 - INFO - Saved result for job: 48287b91-3a8e-41a8-a763-50854f5b2b57
+2026-04-03 08:42:43,166 - INFO - Completed job: 48287b91-3a8e-41a8-a763-50854f5b2b57
+2026-04-03 08:44:35,776 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 08:44:44,554 - INFO - Incoming request: Amazon Pay timeout
+2026-04-03 08:44:44,554 - INFO - Client IP: 127.0.0.1
+2026-04-03 08:44:44,555 - INFO - Cache hit
+2026-04-03 08:47:05,413 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 08:47:12,408 - INFO - Incoming request: Amazon Pay timeout
+2026-04-03 08:47:12,408 - INFO - Client IP: 127.0.0.1
+2026-04-03 08:47:12,409 - INFO - Cache hit
+2026-04-03 08:47:34,471 - INFO - Incoming request: Amazon Pay timeout issue
+2026-04-03 08:47:34,471 - INFO - Client IP: 127.0.0.1
+2026-04-03 08:47:34,473 - INFO - Processing job: ae6831a5-4360-41d7-a4c6-e22b5fa9329e
+2026-04-03 08:47:34,873 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 08:47:36,742 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 08:47:36,744 - INFO - LLM result received for job: ae6831a5-4360-41d7-a4c6-e22b5fa9329e
+2026-04-03 08:47:36,753 - INFO - Saved to cache
+2026-04-03 08:47:36,947 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 08:47:36,967 - INFO - Saved to memory
+2026-04-03 08:47:36,975 - INFO - Saved result for job: ae6831a5-4360-41d7-a4c6-e22b5fa9329e
+2026-04-03 08:47:36,976 - INFO - Completed job: ae6831a5-4360-41d7-a4c6-e22b5fa9329e
+2026-04-03 08:52:18,515 - INFO - Loading faiss with AVX2 support.
+2026-04-03 08:52:18,527 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 08:52:26,306 - INFO - Loading faiss with AVX2 support.
+2026-04-03 08:52:26,319 - INFO - Successfully loaded faiss with AVX2 support.
+2026-04-03 08:53:16,832 - INFO - Incoming request: Amazon Pay timeout issue
+2026-04-03 08:53:16,832 - INFO - Client IP: 127.0.0.1
+2026-04-03 08:53:16,836 - INFO - Cache hit
+2026-04-03 08:54:12,731 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 08:54:23,402 - INFO - Incoming request: Amazon Pay timeout issue
+2026-04-03 08:54:23,402 - INFO - Client IP: 127.0.0.1
+2026-04-03 08:54:23,404 - INFO - Cache hit
+2026-04-03 08:54:40,983 - INFO - Incoming request: Amazon Pay timeout
+2026-04-03 08:54:40,983 - INFO - Client IP: 127.0.0.1
+2026-04-03 08:54:40,985 - INFO - Cache hit
+2026-04-03 08:55:20,794 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 08:55:28,322 - INFO - Incoming request: AliPay timeout
+2026-04-03 08:55:28,322 - INFO - Client IP: 127.0.0.1
+2026-04-03 08:55:28,323 - INFO - Processing job: 69d24313-72df-4b33-b1e2-20386c3a7fde
+2026-04-03 08:55:28,720 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 08:55:31,755 - INFO - HTTP Request: POST https://api.openai.com/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-03 08:55:31,771 - INFO - LLM result received for job: 69d24313-72df-4b33-b1e2-20386c3a7fde
+2026-04-03 08:55:31,791 - INFO - Saved to cache
+2026-04-03 08:55:32,058 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2026-04-03 08:55:32,079 - INFO - Saved to memory
+2026-04-03 08:55:32,087 - INFO - Saved result for job: 69d24313-72df-4b33-b1e2-20386c3a7fde
+2026-04-03 08:55:32,087 - INFO - Completed job: 69d24313-72df-4b33-b1e2-20386c3a7fde

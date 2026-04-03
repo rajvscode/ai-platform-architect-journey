@@ -1,11 +1,12 @@
 from core.limiter import limiter
-from core.models import LogRequest
+from core.models import LogRequest, DocumentRequest
 from core.security import validate_api_key
 from logger import logger
 from cache import get_from_cache
 from fastapi import APIRouter, Request, Header, BackgroundTasks
 from service.worker import process_log_async
 from result_store import save_result, get_result
+from rag import save_document
 import uuid
 import time
 import asyncio
@@ -61,4 +62,15 @@ def fetch_result(job_id: str):
     return {
         "status": "completed",
         "data": result
+    }
+
+@router.post("/add-document")
+def add_document(body: DocumentRequest, x_api_key: str = Header(...)):
+    validate_api_key(x_api_key)
+
+    save_document(body.text)
+
+    return {
+        "status": "success",
+        "message": "Document added to knowledge base"
     }

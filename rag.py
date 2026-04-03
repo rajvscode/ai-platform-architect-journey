@@ -20,12 +20,15 @@ def save_document(new_doc):
     db_log = LogMemory(
         id=str(uuid.uuid4()),
         log=new_doc,
-        embedding=json.dumps(embedding)  # store as JSON
+        embedding=json.dumps(embedding)
     )
 
     db.add(db_log)
     db.commit()
     db.close()
+
+    # 🔥 Refresh index
+    initialize_index()
 
 def load_documents():
     db = SessionLocal()

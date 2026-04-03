@@ -5,7 +5,7 @@ import json
 
 
 def analyze_log(log_text, context_logs):
-    retrieved_docs = search_similar(log_text, threshold=0.8)
+    retrieved_docs = search_similar(log_text, threshold=0.5)
 
     if not retrieved_docs:
         retrieved_docs = ["No relevant past logs found"]
